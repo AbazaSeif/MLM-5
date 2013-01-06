@@ -1,0 +1,20 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="customers">Instytucje</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none">
+		<li class="back"><a href="/institutions">Wróć do listy</a>
+		<li class="add"><a href="/institutions/add">Dodaj instytucję</a>
+		<li class="delete"><a href="<?php echo $this->url(array("action" => "delete"));?>">Usuń instytucję</a>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->form; ?>

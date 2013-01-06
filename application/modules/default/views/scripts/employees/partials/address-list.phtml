@@ -1,0 +1,64 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->getIdentifier()) : ?>
+	<ul class="list-options list-style-none ajax-options">
+		<li class="add"><a href="/layer/employee-addresses/add/<?php echo $this->model->getIdentifier(); ?>">Dodaj adres</a></li>
+	</ul>
+<?php endif; ?>
+<?php
+use Entity\EmployeeAddress;
+
+if ($this->model->addresses->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Ulica</th>
+				<th>Miasto</th>
+				<th>Kod pocztowy</th>
+				<th>Województwo</th>
+				<th>Typ</th>
+				<th class="actions">Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->addresses as $address) : ?>
+				<tr>
+					<td><?php echo $address->getIdentifier(); ?></td>
+					<td><?php echo $address->street; ?></td>
+					<td><?php echo $address->city; ?></td>
+					<td><?php echo $address->postcode; ?></td>
+					<td><?php echo $address->state->name; ?></td>
+					<td>
+						<?php if ($address->addressType == EmployeeAddress::BILLING_ADDRESS) : ?>
+							do płatności
+						<?php elseif ($address->addressType == EmployeeAddress::SHIPPING_ADDRESS) : ?>
+							do wysyłki
+						<?php else : ?>
+							inny
+						<?php endif; ?>
+					</td>
+					<td>
+						<ul class="list-style-none actions ajax-options">
+							<li class="edit">
+								<a href="/layer/employee-addresses/edit/<?php echo $address->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="edytuj" title="edytuj"></a>
+							</li>
+							<li class="delete">
+								<a href="/layer/employee-addresses/delete/<?php echo $address->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="usuń" title="usuń"></a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

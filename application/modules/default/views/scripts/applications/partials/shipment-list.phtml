@@ -1,0 +1,59 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->getIdentifier()) : ?>
+	<ul class="list-options list-style-none ajax-options">
+		<li class="add"><a href="/layer/application-shipments/add/<?php echo $this->model->getIdentifier(); ?>">Dodaj wysyłkę</a></li>
+	</ul>
+<?php endif; ?>
+
+<?php if ($this->model->shipments->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Data dodania</th>
+				<th>Ulica</th>
+				<th>Miasto</th>
+				<th>Kod pocztowy</th>
+				<th>Wojewodztwo</th>
+				<th>Telefon</th>
+				<th>Typ</th>
+				<th>Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->shipments as $shipment) : ?>
+				<tr>
+					<td><?php echo $shipment->getIdentifier(); ?></td>
+					<td><?php echo $shipment->createDate; ?></td>
+					<td><?php echo $shipment->street; ?></td>
+					<td><?php echo $shipment->city; ?></td>
+					<td><?php echo $shipment->postcode; ?></td>
+					<td><?php echo $shipment->state->name; ?></td>
+					<td><?php echo $shipment->phoneNumber; ?></td>
+					<td><?php echo $shipment->type->name; ?></td>
+					</td>
+					<td>
+						<ul class="list-style-none actions ajax-options">
+							<li class="edit">
+								<a href="/layer/application-shipments/edit/<?php echo $shipment->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="edytuj" title="edytuj"></a>
+							</li>
+							<li class="delete">
+								<a href="/layer/application-shipments/delete/<?php echo $shipment->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="usuń" title="usuń"></a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

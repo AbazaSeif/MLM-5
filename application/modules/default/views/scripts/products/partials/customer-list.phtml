@@ -1,0 +1,49 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->customers->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Nazwisko Imię</th>
+				<th>Telefon</th>
+				<th>Email</th>
+				<th>Doradca</th>
+				<th>Miasto</th>
+				<th>Data dodania</th>
+				<th class="activity">Aktywność</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->customers as $customer) : ?>
+				<tr>
+					<td><?php echo $customer->getIdentifier(); ?></td>
+					<td><?php echo $customer->lastname . " " . $customer->firstname; ?></td>
+					<td>
+						<?php if ($customer->addresses->count()) : ?>
+							<?php echo $customer->addresses->current()->phoneNumber;?>
+						<?php endif; ?>
+					</td>
+					<td><?php echo $customer->email; ?></td>
+					<td><?php echo $customer->employee->lastname . " " . $customer->employee->firstname; ?></td>
+					<td>
+						<?php if ($customer->addresses->count()) : ?>
+							<?php echo $customer->addresses->current()->city;?>
+						<?php endif; ?>
+					</td>
+					<td><?php echo $customer->createDate; ?></td>
+					<td class="activity"><?php echo $customer->active; ?></td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+<?php else : ?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

@@ -1,0 +1,29 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<tr class="color-<?php echo ($this->partialCounter % 2); ?>">
+	<td><?php echo $this->model->identifier; ?></td>
+	<td>
+		<?php if ($this->model->employee) : ?>
+			<?php echo $this->model->employee->lastname . ' ' . $this->model->employee->firstname; ?>
+		<?php endif; ?>
+	</td>
+	<td>
+		<?php if ($this->model->employee && $this->model->employee->addresses->count()) : ?>
+			<?php echo $this->model->employee->addresses->current()->email; ?>
+		<?php endif; ?>
+	</td>
+	<td><?php echo $this->model->createDate; ?></td>
+	<td><?php echo $this->model->amount; ?></td>
+	<td>
+		<?php if ($this->model->parts) : ?>
+			<?php echo $this->model->parts; ?>
+		<?php endif;?>
+	</td>
+</tr>

@@ -1,0 +1,51 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->getIdentifier()) : ?>
+	<ul class="list-options list-style-none ajax-options">
+		<li class="add"><a href="/layer/customer-documents/add/<?php echo $this->model->getIdentifier(); ?>">Dodaj dokument</a></li>
+	</ul>
+<?php endif; ?>
+<?php if ($this->model->documents->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Autor</th>
+				<th>Data dodania</th>
+				<th>Nazwa</th>
+				<th>Typ</th>
+				<th>Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->documents as $document) : ?>
+				<tr>
+					<td><?php echo $document->getIdentifier(); ?></td>
+					<td><?php echo $document->employee->lastname . " " . $document->employee->firstname; ?></td>
+					<td><?php echo $document->createDate; ?></td>
+					<td><?php echo $document->name; ?></td>
+					<td><?php echo $document->type; ?></td>
+					<td>
+						<ul class="list-style-none actions">
+							<li class="print">
+								<a href="/documents/<?php echo $document->path; ?>" target="_blank" alt="pobierz" title="pobierz"></a>
+							</li>
+							<li class="delete ajax-options">
+								<a href="/layer/customer-documents/delete/<?php echo $document->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="usuń" title="usuń"></a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

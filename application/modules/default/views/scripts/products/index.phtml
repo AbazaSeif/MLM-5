@@ -1,0 +1,40 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="products">Produkty</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<?php echo $this->filter->render(); ?>
+	<ul class="list-options list-style-none">
+		<li class="add"><a href="/products/add">Dodaj produkt</a>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->partial("paginator.phtml", $this->paginator->getPages()); ?>
+
+<?php if ($this->paginator->getTotalItemCount()) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id"><?php echo $this->sortLink("product_id", "Id"); ?></th>
+				<th><?php echo $this->sortLink("name", "Nazwa"); ?></th>
+				<th><?php echo $this->sortLink(array("lastname", "firstname"), "Osoba kontaktowa", "contact_persons"); ?></th>
+				<th><?php echo $this->sortLink("email", "Email", "contact_persons"); ?></th>
+				<th><?php echo $this->sortLink("city", "Miasto", "contact_persons"); ?></th>
+				<th><?php echo $this->sortLink("phone_number", "Telefon", "contact_persons"); ?></th>
+				<th><?php echo $this->sortLink("name", "Waluta", "currency"); ?></th>
+				<th class="activity"><?php echo $this->sortLink("active", "Aktywność"); ?></th>
+				<th class="actions">Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php echo $this->partialLoop("products/partials/list-item.phtml", $this->paginator); ?>
+		</tbody>
+	</table>
+<?php endif; ?>

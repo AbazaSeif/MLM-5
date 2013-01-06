@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<links>
+		<agreement-types>
+			<label>Typy umów</label>
+			<uri>/agreement-types</uri>
+			<pages>
+				<configuration>
+					<controller>configuration</controller>
+				</configuration>
+				<employees>
+					<controller>employees</controller>
+				</employees>
+			</pages>
+		</agreement-types>
+	
+		<application-statuses>
+			<label>Statusy wniosków</label>
+			<uri>/application-statuses</uri>
+			<pages>
+				<applications>
+					<controller>applications</controller>
+				</applications>
+			</pages>
+		</application-statuses>
+	
+		<contact-persons>
+			<label>Osoby kontaktowe</label>
+			<uri>/contact-persons</uri>
+			<pages>
+				<configuration>
+					<controller>configuration</controller>
+				</configuration>
+				<partners>
+					<controller>partners</controller>
+				</partners>
+				<products>
+					<controller>products</controller>
+				</products>
+			</pages>
+		</contact-persons>
+	
+		<currency>
+			<label>Waluty</label>
+			<uri>/currency</uri>
+			<pages>
+				<configuration>
+					<controller>configuration</controller>
+				</configuration>
+				<products>
+					<controller>products</controller>
+				</products>
+			</pages>
+		</currency>
+	
+		<customer-groups>
+			<label>Grupy klientów</label>
+			<uri>/customer-groups</uri>
+			<pages>
+				<customers>
+					<controller>customers</controller>
+				</customers>
+			</pages>
+		</customer-groups>
+		
+		<customer-statuses>
+			<label>Statusy klientów</label>
+			<uri>/customer-statuses</uri>
+			<pages>
+				<customers>
+					<controller>customers</controller>
+				</customers>
+			</pages>
+		</customer-statuses>
+		
+		<employee-groups>
+			<label>Grupy pracowników</label>
+			<uri>/employee-groups</uri>
+			<pages>
+				<employees>
+					<controller>employees</controller>
+				</employees>
+				<employee-positions>
+					<controller>employee-positions</controller>
+				</employee-positions>
+				<employee-privileges>
+					<controller>employee-privileges</controller>
+				</employee-privileges>
+				<employee-trainings>
+					<controller>trainings</controller>
+				</employee-trainings>
+			</pages>
+		</employee-groups>
+		
+		<employee-positions>
+			<label>Stanowiska pracowników</label>
+			<uri>/employee-positions</uri>
+			<pages>
+				<employee-groups>
+					<controller>employee-groups</controller>
+				</employee-groups>
+				<employee-privileges>
+					<controller>employee-privileges</controller>
+				</employee-privileges>
+				<employee-trainings>
+					<controller>trainings</controller>
+				</employee-trainings>
+				<employees>
+					<controller>employees</controller>
+				</employees>
+			</pages>
+		</employee-positions>
+		
+		<employee-trainings>
+			<label>Szkolenia pracowników</label>
+			<uri>/trainings</uri>
+			<pages>
+				<employee-groups>
+					<controller>employee-groups</controller>
+				</employee-groups>
+				<employee-positions>
+					<controller>employee-positions</controller>
+				</employee-positions>
+				<employee-privileges>
+					<controller>employee-privileges</controller>
+				</employee-privileges>
+				<employees>
+					<controller>employees</controller>
+				</employees>
+			</pages>
+		</employee-trainings>
+
+		<institutions>
+			<label>Instytucje</label>
+			<uri>/institutions</uri>
+			<pages>
+				<customers>
+					<controller>customers</controller>
+				</customers>
+			</pages>
+		</institutions>
+		
+		<institution-products>
+			<label>Produkty instytucji</label>
+			<uri>/institution-products</uri>
+			<pages>
+				<customers>
+					<controller>customers</controller>
+				</customers>
+				<institutions>
+					<controller>institutions</controller>
+				</institutions>
+			</pages>
+		</institution-products>
+		
+		<instructions>
+			<label>Instrument</label>
+			<uri>/instructions</uri>
+			<pages>
+				<customers>
+					<controller>customers</controller>
+				</customers>
+			</pages>
+		</instructions>
+		
+		<credit-types>
+			<label>Typy kredytów</label>
+			<uri>/credit-types</uri>
+			<pages>
+				<customers>
+					<controller>customers</controller>
+				</customers>
+			</pages>
+		</credit-types>
+
+		<product-types>
+			<label>Typy produktów</label>
+			<uri>/product-types</uri>
+			<pages>
+				<products>
+					<controller>products</controller>
+				</products>
+			</pages>
+		</product-types>
+		
+		<shipment-types>
+			<label>Typy wysyłek</label>
+			<uri>/shipment-types</uri>
+			<pages>
+				<configuration>
+					<controller>configuration</controller>
+				</configuration>
+			</pages>
+		</shipment-types>
+	</links>
+</configdata>

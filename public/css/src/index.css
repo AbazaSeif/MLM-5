@@ -1,0 +1,273 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+.info {
+	background-color: #fdfdfd;
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+	.info h4 {
+		border-bottom: solid 1px #c6c6c6;
+		border-radius: 5px 5px 0 0;
+		font-style: italic;
+		margin: 0;
+		padding: 12.5px 12.5px 12.5px 53px;
+	}
+	
+	   .info h4.dashboard {
+            background: url("../images/info-icons/dashboard.png") no-repeat 12.5px 7.5px #F0F0F0; 
+        }
+	
+		.info h4.customers {
+			background: url("../images/info-icons/customers.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.applications {
+			background: url("../images/info-icons/applications.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.employees {
+			background: url("../images/info-icons/employees.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.settlements {
+			background: url("../images/info-icons/settlements.png") no-repeat 12.5px 7.5px #F0F0F0;
+		}
+		
+		.info h4.recruitment {
+			background: url("../images/info-icons/recruitment.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.partners {
+			background: url("../images/info-icons/partners.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.products {
+			background: url("../images/info-icons/products.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.news {
+            background: url("../images/info-icons/news.png") no-repeat 12.5px 7.5px #F0F0F0; 
+        }
+		
+		.info h4.configuration {
+			background: url("../images/info-icons/configuration.png") no-repeat 12.5px 7.5px #F0F0F0; 
+			border: none;
+			border-radius: 5px;
+		}
+	
+	.info .related-links {
+		font-size: 0.75em;
+		height: 47px;
+		line-height: 47px;
+		list-style-type: none;
+		margin: 0 10px 0 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		vertical-align: middle;
+	}
+	
+		.info .related-links li {
+			display: inline-block;
+		}
+	
+		.info .related-links li:first-child {
+			color: #777777;
+			padding-right: 5px;
+		}
+		
+			.info .related-links a {
+				border-right: solid 1px #aaa;
+				color: #cd302b;
+				margin-right: 5px;
+				padding-right: 5px;
+			}
+			
+			.info .related-links li:last-child a {
+				border: none;
+			}
+			
+.list-options {
+	font-size: 0.75em;
+	padding: 5px 10px;
+}
+
+	.list-options li {
+		margin-right: 10px;
+	}
+
+	.list-options a {
+		background-color: #fafafa;
+		background-position: 7.5px center;
+		background-repeat: no-repeat;
+	    border: 1px solid #ccc;
+	    border-radius: 3px;
+	    cursor: pointer;
+	    display: inline-block;
+	    line-height: 20px;
+	    padding: 5px 10px 5px 30px;
+	    text-decoration: none;
+	}
+	
+	.list-options a:hover {
+	    border-color: #999999;
+	    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+	}
+	
+	.list-options .add a {
+		background-image: url("../images/icons/add.png");
+	}
+	
+	.list-options .back a {
+		background-image: url("../images/icons/back.png");
+	}
+	
+	.list-options .delete a {
+		background-image: url("../images/icons/delete.png");
+	}
+	
+	.list-options .print a {
+		background-image: url("../images/icons/print.png");
+	}
+	
+	.list-options .change-to-employee a {
+		background-image: url("../images/icons/change_to_employee.png");
+	}
+
+.paginationControl {
+	font-size: 0.85em;
+	margin-bottom: 2.5px;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+}
+
+	.paginationControl .total-item-count {
+		font-size: 0.85em;
+		position: absolute;
+		left: 5px;
+		top: 5px;
+	}
+	
+	.paginationControl a {
+		display: inline-block;
+		margin: 0 2.5px;
+	}
+	
+		.paginationControl .current-page {
+			color: #CD302B;
+			font-weight: bold;
+		}
+	
+	.paginationControl .arrow {
+		display: inline-block;
+		margin: 0 5px;
+	}
+	
+	.paginationControl .items-per-page {
+		display: inline-block;
+		font-size: 0.85em;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	
+		.paginationControl fieldset {
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+			.paginationControl fieldset select {
+				border: 1px solid #B9B7B8;
+				border-radius: 3px;
+				margin-left: 5px;
+			}
+
+.table {
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	border-spacing: 0;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+	.table thead th {
+		background-color: #F0F0F0;
+		border-bottom: solid 1px #c6c6c6;
+		border-radius: 5px 5px 0 0;
+		font-size: 0.70em;
+	}
+	
+		.table thead .id,
+		.table thead .activity {
+			width: 70px;
+		}
+		
+		.table thead .actions {
+			width: 100px;
+		}	
+		
+		.table thead a.asc,
+		.table thead a.desc {
+			background-position: center right;
+			background-repeat: no-repeat;
+			display: inline-block;
+			padding: 1em 20px 1em 0;
+		}
+		
+		.table thead a.desc {
+			background-image: url("../images/arrow-up.png");
+		}
+		
+		.table thead a.asc {
+			background-image: url("../images/arrow-down.png");
+		}
+	
+	.table tbody tr {
+		font-size: 0.9em;
+	}
+	
+	.table tbody tr.color-0 {
+		background-color: #F3F3F3;
+	}
+	
+		.table tbody td {
+			padding: 3px 0;
+		}
+		
+	.table .actions li {
+		margin-right: 2.5px;
+	}	
+	
+		.table .actions li:last-child {
+			margin-right: 0;
+		}
+		
+		.table .actions li a {
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+		}
+		
+		.table .actions .edit {
+			background: url("../images/icons/edit.png") center center no-repeat transparent;
+		}
+		
+		.table .actions .delete {
+			background: url("../images/icons/delete.png") center center no-repeat transparent;
+		}
+		
+		.table .actions .print {
+			background: url("../images/icons/print.png") center center no-repeat transparent;
+		}

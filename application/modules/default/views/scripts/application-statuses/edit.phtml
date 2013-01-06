@@ -1,0 +1,20 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="applications">Statusy wniosków</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none">
+		<li class="back"><a href="/application-statuses">Wróć do listy</a>
+		<li class="add"><a href="/application-statuses/add">Dodaj status wniosku</a>
+		<li class="delete"><a href="<?php echo $this->url(array("action" => "delete"));?>">Usuń status wniosku</a>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->form; ?>

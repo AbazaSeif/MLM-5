@@ -1,0 +1,39 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->news->active == 1) : ?>
+    <li>
+        <dl>
+            <dt>
+                <span class="news-date">
+                    <?php echo $this->model->news->createDate; ?>
+                </span>
+                <span class="news-title">
+                    <?php echo $this->model->news->title; ?>
+                </span>
+                <span class="news-author">
+                    <?php
+                        echo $this->model->news->employee->lastname . ' '
+                           . $this->model->news->employee->firstname;
+                    ?>
+                </span>
+            </dt>
+            <dd>
+                <?php echo $this->model->news->text; ?>
+                <?php if ($this->model->news->attachment) : ?>
+                    <p>
+                        <a class="attachment" href='<?php echo APPLICATION_PATH . "../public/documents/" . $this->model->news->attachment; ?>' target="_blank">
+                            Załącznik
+                        </a>
+                    </p>
+                <?php endif; ?>
+            </dd>
+        </dl>
+    </li>
+<?php endif; ?>

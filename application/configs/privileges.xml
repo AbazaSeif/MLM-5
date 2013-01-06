@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<privileges>
+	<Dashboard>
+		<controllers>
+			<name>Index</name>
+		</controllers>
+	</Dashboard>
+
+	<Customers>
+		<controllers>
+			<name>CreditTypes</name>
+			<name>CustomerGroups</name>
+			<name>Customers</name>
+			<name>CustomerStatuses</name>
+			<name>InstitutionProducts</name>
+			<name>Institutions</name>
+			<name>Instructions</name>
+			
+			<name>CustomerAddresses</name>
+			<name>CustomerCredits</name>
+			<name>CustomerDocuments</name>
+			<name>CustomerOldProducts</name>
+			<name>CustomerRenouncements</name>
+			
+			<name>Institution</name>
+		</controllers>
+	</Customers>
+	
+	<Applications>
+		<controllers>
+			<name>Applications</name>
+			<name>ApplicationStatuses</name>
+			
+			<name>ApplicationDocuments</name>
+			<name>ApplicationShipments</name>
+		</controllers>
+	</Applications>
+	
+	<Employees>
+		<controllers>
+			<name>AgreementTypes</name>
+			<name>EmployeeGroups</name>
+			<name>EmployeePositions</name>
+			<name>Employees</name>
+			<name>Trainings</name>
+			
+			<name>EmployeeAddresses</name>
+			<name>EmployeeDocuments</name>
+			<name>EmployeePrivileges</name>
+			<name>EmployeeTrainings</name>
+		</controllers>
+	</Employees>
+	
+	<Settlements>
+		<controllers>
+			<name>Settlements</name>
+		</controllers>
+	</Settlements>
+	
+	<Recruitments>
+		<controllers>
+			<name>Recruitment</name>
+			
+			<name>RecruitmentDocuments</name>
+		</controllers>
+	</Recruitments>
+	
+	<News>
+        <controllers>
+            <name>News</name>
+        </controllers>
+    </News>
+	
+	<Partners>
+		<controllers>
+			<name>ContactPersons</name>
+			<name>Partners</name>
+		</controllers>
+	</Partners>
+	
+	<Products>
+		<controllers>
+			<name>ContactPersons</name>
+			<name>Products</name>
+			<name>Currency</name>
+			<name>ProductTypes</name>
+		</controllers>
+	</Products>
+	
+	<Configuration>
+		<controllers>
+			<name>AgreementTypes</name>
+			<name>ContactPersons</name>
+			<name>Configuration</name>
+			<name>Currency</name>
+			<name>ShipmentTypes</name>
+		</controllers>
+	</Configuration>
+</privileges>

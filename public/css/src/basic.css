@@ -1,0 +1,71 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+body {
+	background-color: #fdfdfd;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+#body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#header,
+#content,
+#breadcrumbs {
+	margin: 0 auto;
+	min-width: 960px;
+	max-width: 1280px;
+	width: 90%;
+}
+
+#content {
+	margin-bottom: 20px;
+}
+
+#footer {
+	border-top: solid 1px #B6B6B6;
+	color: #000;
+	font-size: 0.75em;
+	font-style: italic;
+	padding: 0.5em 0;
+	text-align: center; 
+}
+
+body {
+    margin-top: 2.25em;
+}
+
+#license {
+    background-color: #DC143C;
+    background-image: -webkit-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:    -moz-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:     -ms-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:      -o-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:         linear-gradient(to bottom, #DC143C, #CD5C5C);
+    border: 1px solid #B22222;
+    color: #F8F8F8;
+    display: block !important;
+    font-weight: bold;
+    padding: .5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+}

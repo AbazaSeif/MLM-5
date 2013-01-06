@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<nav>
+		<Dashboard>
+			<label>Dashboard</label>
+			<uri>/index</uri>
+		</Dashboard>
+		
+		<Customers>
+			<label>Klienci</label>
+			<uri>/customers</uri>
+			<pages>
+				<customer-groups>
+					<label>Grupy klientów</label>
+					<uri>/customer-groups</uri>
+					<pages>
+						<customer-groups-add>
+							<label>Dodaj grupę</label>
+							<uri>/customer-groups/add</uri>
+						</customer-groups-add>
+						<customer-groups-edit>
+							<label>Edytuj grupę</label>
+							<uri>/customer-groups/edit</uri>
+						</customer-groups-edit>
+					</pages>
+				</customer-groups>
+				<customer-statuses>
+					<label>Statusy klientów</label>
+					<uri>/customer-statuses</uri>
+					<pages>
+						<customer-statuses-add>
+							<label>Dodaj status</label>
+							<uri>/customer-statuses/add</uri>
+						</customer-statuses-add>
+						<customer-statuses-edit>
+							<label>Edytuj status</label>
+							<uri>/customer-statuses/edit</uri>
+						</customer-statuses-edit>
+					</pages>
+				</customer-statuses>
+				<customer-add>
+					<label>Dodaj klienta</label>
+					<uri>/customers/add</uri>
+				</customer-add>
+				<customer-edit>
+					<label>Edytuj klienta</label>
+					<uri>/customers/edit</uri>
+				</customer-edit>
+				<institutions>
+					<label>Instytucje</label>
+					<uri>/institutions</uri>
+					<pages>
+						<institutions-add>
+							<label>Dodaj instytucję</label>
+							<uri>/institutions/add</uri>
+						</institutions-add>
+						<institutions-edit>
+							<label>Edytuj instytucję</label>
+							<uri>/institutions/edit</uri>
+						</institutions-edit>
+					</pages>
+				</institutions>
+				<institution-products>
+					<label>Produkty instytucji</label>
+					<uri>/institution-products</uri>
+					<pages>
+						<institution-products-add>
+							<label>Dodaj produkt</label>
+							<uri>/institution-products/add</uri>
+						</institution-products-add>
+						<institution-products-edit>
+							<label>Edytuj produkt</label>
+							<uri>/institution-products/edit</uri>
+						</institution-products-edit>
+					</pages>
+				</institution-products>
+				<instructions>
+					<label>Instrument</label>
+					<uri>/instructions</uri>
+					<pages>
+						<instructions-add>
+							<label>Dodaj instrument</label>
+							<uri>/instructions/add</uri>
+						</instructions-add>-add>
+						<instructions-edit>
+							<label>Edytuj instytucję</label>
+							<uri>/instructions/edit</uri>
+						</instructions-edit>
+					</pages>
+				</instructions>
+				<credit-types>
+					<label>Typy kredytów</label>
+					<uri>/credit-types</uri>
+					<pages>
+						<credit-types-add>
+							<label>Dodaj typ kredytu</label>
+							<uri>/credit-types/add</uri>
+						</credit-types-add>
+						<credit-types-edit>
+							<label>Edytuj typ kredytu</label>
+							<uri>/credit-types/edit</uri>
+						</credit-types-edit>
+					</pages>
+				</credit-types>
+			</pages>
+		</Customers>
+		
+		<Applications>
+			<label>Wnioski</label>
+			<uri>/applications</uri>
+			<pages>
+				<application-statuses>
+					<label>Statusy wniosków</label>
+					<uri>/application-statuses</uri>
+					<pages>
+						<application-statuses-add>
+							<label>Dodaj status</label>
+							<uri>/application-statuses/add</uri>
+						</application-statuses-add>
+						<application-statuses-edit>
+							<label>Edytuj status</label>
+							<uri>/application-statuses/edit</uri>
+						</application-statuses-edit>
+					</pages>
+				</application-statuses>
+				<application-add>
+					<label>Dodaj wniosek</label>
+					<uri>/applications/add</uri>
+				</application-add>
+				<application-edit>
+					<label>Edytuj wniosek</label>
+					<uri>/applications/edit</uri>
+				</application-edit>
+			</pages>
+		</Applications>
+		
+		<Employees>
+			<label>Pracownicy</label>
+			<uri>/employees</uri>
+			<pages>
+				<employee-groups>
+					<label>Grupy pracowników</label>
+					<uri>/employee-groups</uri>
+					<pages>
+						<employee-groups-add>
+							<label>Dodaj grupę</label>
+							<uri>/employee-groups/add</uri>
+						</employee-groups-add>
+						<employee-groups-edit>
+							<label>Edytuj grupę</label>
+							<uri>/employee-groups/edit</uri>
+						</employee-groups-edit>
+					</pages>
+				</employee-groups>
+				<employee-positions>
+					<label>Stanowiska pracowników</label>
+					<uri>/employee-positions</uri>
+					<pages>
+						<employee-positions-add>
+							<label>Dodaj stanowisko</label>
+							<uri>/employee-positions/add</uri>
+						</employee-positions-add>
+						<employee-positions-edit>
+							<label>Edytuj stanowisko</label>
+							<uri>/employee-positions/edit</uri>
+						</employee-positions-edit>
+					</pages>
+				</employee-positions>
+				<employee-trainings>
+					<label>Szkolenia pracowników</label>
+					<uri>/trainings</uri>
+					<pages>
+						<employee-trainings-add>
+							<label>Dodaj szkolenie</label>
+							<uri>/trainings/add</uri>
+						</employee-trainings-add>
+						<employee-trainings-edit>
+							<label>Edytuj szkolenie</label>
+							<uri>/trainings/edit</uri>
+						</employee-trainings-edit>
+					</pages>
+				</employee-trainings>
+				<employee-add>
+					<label>Dodaj pracownika</label>
+					<uri>/employees/add</uri>
+				</employee-add>
+				<employee-edit>
+					<label>Edytuj pracownika</label>
+					<uri>/employees/edit</uri>
+				</employee-edit>
+			</pages>
+		</Employees>
+		
+		<settlements>
+			<label>Rozliczenia</label>
+			<uri>/settlements</uri>
+			<pages>
+				<settlements-edit>
+					<label>Edytuj</label>
+					<uri>/settlements/edit</uri>
+				</settlements-edit>
+				<settlements-add-bonus>
+                    <label>Dodaj premie</label>
+                    <uri>/settlements/addBonus</uri>
+                </settlements-add-bonus>
+			</pages>
+		</settlements>
+		
+		<recruitment>
+			<label>Rekrutacja</label>
+			<uri>/recruitment</uri>
+			<pages>
+				<recruitment-add>
+					<label>Dodaj osobę</label>
+					<uri>/recruitment/add</uri>
+				</recruitment-add>
+				<recruitment-edit>
+					<label>Edytuj osobę</label>
+					<uri>/recruitment/edit</uri>
+				</recruitment-edit>
+			</pages>
+		</recruitment>
+		
+		<Partners>
+			<label>Partnerzy</label>
+			<uri>/partners</uri>
+			<pages>
+				<partner-add>
+					<label>Dodaj partnera</label>
+					<uri>/partners/add</uri>
+				</partner-add>
+				<partner-edit>
+					<label>Edytuj partnera</label>
+					<uri>/partners/edit</uri>
+				</partner-edit>
+			</pages>
+		</Partners>
+		
+		<Products>
+			<label>Produkty</label>
+			<uri>/products</uri>
+			<pages>
+				<product-types>
+					<label>Typy produktów</label>
+					<uri>/product-types</uri>
+					<pages>
+						<product-types-add>
+							<label>Dodaj typ produktu</label>
+							<uri>/product-types/add</uri>
+						</product-types-add>
+						<product-types-edit>
+							<label>Edytuj typ produktu</label>
+							<uri>/product-types/edit</uri>
+						</product-types-edit>
+					</pages>
+				</product-types>
+				<product-add>
+					<label>Dodaj produkt</label>
+					<uri>/products/add</uri>
+				</product-add>
+				<product-edit>
+					<label>Edytuj produkt</label>
+					<uri>/products/edit</uri>
+				</product-edit>
+			</pages>
+		</Products>
+		
+		<News>
+		  <label>News</label>
+		  <uri>/news</uri>
+		  <pages>
+	          <news-add>
+	              <label>Dodaj news</label>
+	              <uri>/news/add</uri>
+	          </news-add>
+	          <news-edit>
+	              <label>Edytuj news</label>
+	              <uri>/news/edit</uri>
+	          </news-edit>
+            </pages>
+		</News>
+		
+		<Configuration>
+			<label>Konfiguracja</label>
+			<uri>/configuration</uri>
+			<pages>
+				<agreement-types>
+					<label>Typy umów</label>
+					<uri>/agreement-types</uri>
+					<pages>
+						<agreement-types-add>
+							<label>Dodaj typ umowy</label>
+							<uri>/agreement-types/add</uri>
+						</agreement-types-add>
+						<agreement-types-edit>
+							<label>Edytuj typ umowy</label>
+							<uri>/agreement-types/edit</uri>
+						</agreement-types-edit>
+					</pages>
+				</agreement-types>
+				<contact-persons>
+					<label>Osoby kontaktowe</label>
+					<uri>/contact-persons</uri>
+					<pages>
+						<contact-person-add>
+							<label>Dodaj osobę</label>
+							<uri>/contact-persons/add</uri>
+						</contact-person-add>
+						<contact-person-edit>
+							<label>Edytuj osobę</label>
+							<uri>/contact-persons/edit</uri>
+						</contact-person-edit>
+					</pages>
+				</contact-persons>
+				<currency>
+					<label>Waluty</label>
+					<uri>/currency</uri>
+					<pages>
+						<currency-add>
+							<label>Dodaj walutę</label>
+							<uri>/currency/add</uri>
+						</currency-add>
+						<currency-edit>
+							<label>Edytuj walutę</label>
+							<uri>/currency/edit</uri>
+						</currency-edit>
+					</pages>
+				</currency>
+				<shipment-types>
+					<label>Typy wysyłek</label>
+					<uri>/shipment-types</uri>
+					<pages>
+						<shipment-types-add>
+							<label>Dodaj typ wysyłki</label>
+							<uri>/shipment-types/add</uri>
+						</shipment-types-add>
+						<shipment-types-edit>
+							<label>Edytuj typ wysyłki</label>
+							<uri>/shipment-types/edit</uri>
+						</shipment-types-edit>
+					</pages>
+				</shipment-types>
+			</pages>
+		</Configuration>
+	</nav>
+</configdata>

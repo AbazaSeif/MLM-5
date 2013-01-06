@@ -1,0 +1,18 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="settlements">Rozliczenia</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none">
+		<li class="back"><a href="/settlements/edit/<?php echo $this->settlementId; ?>">Wróć do rozliczenia</a></li>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->form; ?>

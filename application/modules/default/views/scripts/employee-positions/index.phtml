@@ -1,0 +1,34 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="employees">Stanowiska pracowników</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none">
+		<li class="add"><a href="/employee-positions/add">Dodaj stanowisko</a>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->partial("paginator.phtml", $this->paginator->getPages()); ?>
+
+<?php if ($this->paginator->getTotalItemCount()) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id"><?php echo $this->sortLink("employee_status_id", "Id"); ?></th>
+				<th><?php echo $this->sortLink("name", "Nazwa"); ?></th>
+				<th class="activity"><?php echo $this->sortLink("active", "Aktywność"); ?></th>
+				<th class="actions">Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php echo $this->partialLoop("employee-positions/partials/list-item.phtml", $this->paginator); ?>
+		</tbody>
+	</table>
+<?php endif; ?>

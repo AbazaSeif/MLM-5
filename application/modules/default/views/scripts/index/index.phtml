@@ -1,0 +1,22 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="dashboard">Dashboard</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none"></ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->partial("paginator.phtml", $this->paginator->getPages()); ?>
+
+<?php if ($this->paginator->getTotalItemCount()) : ?>
+    <ul id="dashboard-news">
+        <?php echo $this->partialLoop("index/partials/news-item.phtml", $this->paginator); ?>
+    </ul>
+<?php endif; ?>

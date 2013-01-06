@@ -1,0 +1,38 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<tr class="color-<?php echo ($this->partialCounter % 2); ?>">
+	<td><?php echo $this->model->identifier; ?></td>
+	<td>
+	    <?php
+            $title = $this->model->title;
+            if (mb_strlen($title) > 30) {
+                $title = mb_substr($title, 0, 27) . "...";
+            }
+            echo $title;
+	    ?>
+	</td>
+	<td>
+	    <?php
+            $groups = array();
+            foreach ($this->model->groups as $group) {
+                $groups[] = $group->group->name;
+            }
+
+            echo implode(", ", $groups);
+	    ?>
+	</td>
+	<td class="activity"><?php echo $this->model->active; ?></td>
+	<td>
+		<ul class="list-style-none actions">
+			<li class="edit"><a href="/news/edit/<?php echo $this->model->identifier; ?>" alt="edytuj" title="edytuj"></a></li>
+			<li class="delete"><a href="/news/delete/<?php echo $this->model->identifier; ?>" alt="usuń" title="usuń"></a></li>
+		</ul>
+	</td>
+</tr>

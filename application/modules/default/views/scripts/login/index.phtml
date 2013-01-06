@@ -1,0 +1,55 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php echo $this->doctype(); ?>
+<html>
+	<head>
+		<?php
+			echo $this->headMeta();
+			echo $this->headTitle();
+			echo $this->headLink();
+			echo $this->headScript();
+		?>
+		<meta name="author" content="Adrian Wądrzyk"/>
+		<meta name="description" content="MLM - wersja demonstracyjna"/>
+	</head>
+	<body>
+		<div id="login-container">
+			<form method="post" action="/login" id="login-form" class="form">
+				<fieldset>
+					<legend>Logowanie</legend>
+					<div class="input-line">
+						<label for="login-element"><img src="/images/login-username.png" /></label>
+						<input type="text" name="login" id="login-element" class="text-large" value="<?php echo $this->data["login"]; ?>"/>
+					</div>
+					<div class="input-line">
+						<label for="password-element"><img src="/images/login-password.png" /></label>
+						<input type="password" name="password" id="password-element" class="text-large" autocomplete="off"/>
+					</div>
+
+					<?php if (isset($this->formErrors)): ?>
+						<?php foreach($this->formErrors as $errno => $message): ?>
+							<ul class="errors">
+								<li><?php echo $message; ?></li>
+							</ul>
+						<?php endforeach;?>
+					<?php endif; ?>
+				</fieldset>
+			</form>
+
+			<script type="text/javascript">
+				$("#password-element").bind("keypress", function(event) {
+					if (event.keyCode == 13) {
+						this.form.submit();
+					}
+				});
+			</script>
+		</div>
+	</body>
+</html>

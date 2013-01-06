@@ -1,0 +1,6 @@
+.buildpath
+.project
+.zfproject.xml
+.settings
+public/documents/*
+tmp/log/*

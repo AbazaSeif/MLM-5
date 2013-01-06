@@ -1,0 +1,43 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->products->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Nazwa</th>
+				<th>Osoba kontaktowa</th>
+				<th>Email</th>
+				<th>Miasto</th>
+				<th>Telefon</th>
+				<th>Waluta</th>
+				<th class="activity">Aktywność</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->products as $product) : ?>
+				<tr>
+					<td><?php echo $product->getIdentifier(); ?></td>
+					<td><?php echo $product->name; ?></td>
+					<td><?php echo $product->contactPerson->lastname . " " . $product->contactPerson->firstname; ?></td>
+					<td><?php echo $product->contactPerson->email; ?></td>
+					<td><?php echo $product->contactPerson->city; ?></td>
+					<td><?php echo $product->contactPerson->phoneNumber; ?></td>
+					<td><?php echo $product->currency->name; ?></td>
+					<td class="activity"><?php echo $product->active; ?></td>
+				</tr>
+			<?php endforeach;?>
+		</tbody>
+	</table>
+<?php else : ?>
+	<div class="message-container information">
+		<p>Brak wyników do wyświetlenia</p>
+	</div>
+<?php endif; ?>

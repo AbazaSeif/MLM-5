@@ -1,0 +1,62 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->pageCount): ?>
+	<div class="paginationControl">
+		<span class="total-item-count">
+			Ilość wyników: <?php echo $this->totalItemCount; ?>
+		</span>
+
+		<span class="arrow">
+			<a href="<?php echo $this->url(array('page' => $this->first)); ?>">&laquo;&laquo;</a>
+			<?php if (isset($this->previous)): ?>
+				<a href="<?php echo $this->url(array('page' => $this->previous)); ?>">&laquo;</a>
+			<?php else: ?>
+			  <span class="disabled">&laquo;</span>
+			<?php endif; ?>
+		</span>
+
+		<?php foreach ($this->pagesInRange as $page): ?>
+		    <a href="<?php echo $this->url(array('page' => $page)); ?>" <?php if ($page == $this->current):?>class="current-page"<?php endif;?>>
+		    	<?php echo $page; ?>
+		    </a>
+		<?php endforeach; ?>
+
+		<span class="arrow">
+			<?php if (isset($this->next)): ?>
+				<a href="<?php echo $this->url(array('page' => $this->next)); ?>">&raquo;</a>
+			<?php else: ?>
+				<span class="disabled">&raquo;</span>
+			<?php endif; ?>
+			<a href="<?php echo $this->url(array('page' => $this->last)); ?>">&raquo;&raquo;</a>
+		</span>
+		<form class="items-per-page" method="get" action="<?php echo $this->url(); ?>">
+			<fieldset>
+				<label for="items">Elementów na stronie:</label>
+				<select name="items" id="items">
+					<option <?php if ($this->itemCountPerPage == 10): ?>selected="selected"<?php endif; ?>>10</option>
+					<option <?php if ($this->itemCountPerPage == 15): ?>selected="selected"<?php endif; ?>>15</option>
+					<option <?php if ($this->itemCountPerPage == 20): ?>selected="selected"<?php endif; ?>>20</option>
+					<option <?php if ($this->itemCountPerPage == 25): ?>selected="selected"<?php endif; ?>>25</option>
+					<option <?php if ($this->itemCountPerPage == 50): ?>selected="selected"<?php endif; ?>>50</option>
+					<option <?php if ($this->itemCountPerPage == 75): ?>selected="selected"<?php endif; ?>>75</option>
+					<option <?php if ($this->itemCountPerPage == 100): ?>selected="selected"<?php endif; ?>>100</option>
+				</select>
+			</fieldset>
+		</form>
+	</div>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>
+
+<script type="text/javascript">
+	$("#items").bind("change", function(event) {
+		this.form.submit();
+	});
+</script>

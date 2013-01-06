@@ -1,0 +1,31 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->partners->count()) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Nazwa</th>
+				<th class="activity">Aktywność</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->partners as $partner) : ?>
+				<tr>
+					<td><?php echo $partner->getIdentifier(); ?></td>
+					<td><?php echo $partner->name; ?></td>
+					<td class="activity"><?php echo $partner->active; ?></td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else : ?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

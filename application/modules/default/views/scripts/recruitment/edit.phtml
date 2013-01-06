@@ -1,0 +1,21 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="recruitment">Rekrutacja</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none">
+		<li class="back"><a href="/recruitment">Wróć do listy</a>
+		<li class="add"><a href="/recruitment/add">Dodaj osobę</a>
+		<li class="change-to-employee"><a href="/employees/add" rel="recruit-form">Utwórz pracownika</a>
+		<li class="delete"><a href="<?php echo $this->url(array("action" => "delete"));?>">Usuń osobę</a>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->form; ?>

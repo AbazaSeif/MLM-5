@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+	<routes>
+		<edit-full type="Zend_Controller_Router_Route">
+			<route>:module/:controller/:action/:id/*</route>
+		</edit-full>
+		<edit-without-module  type="Zend_Controller_Router_Route">
+			<route>:controller/:action/:id/*</route>
+			<defaults>
+				<module>default</module>
+			</defaults>
+		</edit-without-module>
+		
+		<list  type="Zend_Controller_Router_Route">
+			<route>:controller/index/*</route>
+			<defaults>
+				<module>default</module>
+				<action>index</action>
+			</defaults>
+		</list>
+		
+		<layer-add type="Zend_Controller_Router_Route">
+			<route>layer/:controller/add/:parent</route>
+			<defaults>
+				<module>layer</module>
+				<action>add</action>
+			</defaults>
+		</layer-add>
+		<layer type="Zend_Controller_Router_Route">
+			<route>layer/:controller/:action/:id/:parent</route>
+			<defaults>
+				<module>layer</module>
+			</defaults>
+		</layer>
+		
+		<document type="Zend_Controller_Router_Route">
+			<route>layer/document/upload</route>
+			<defaults>
+				<module>layer</module>
+				<controller>document</controller>
+				<action>upload</action>
+			</defaults>
+		</document>
+		
+		<json-full type="Zend_Controller_Router_Route">
+			<route>json/:controller/:action/*</route>
+			<defaults>
+				<module>json</module>
+			</defaults>
+		</json-full>
+	</routes>
+</configdata>

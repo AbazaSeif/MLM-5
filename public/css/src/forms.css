@@ -1,0 +1,323 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+.form-container {
+	background-color: #fdfdfd;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+}
+
+	.form {
+		background-color: #F9F9F9;
+		border-left: solid 1px #ccc;
+		border-radius: 0 5px 5px 0;
+		display: inline-block;
+		margin-left: -1px;
+		padding: 0 1%;
+		position: relative;
+		vertical-align: top;
+		width: 79.75%;
+	}
+	
+		.layer .form {
+			width: 98%;
+		}
+
+	.form .form-info {
+		color: #777;
+		font-size: 0.7em;
+		font-style: italic;
+		position: absolute;
+		top: 0;
+		right: 20px;
+	}
+
+	.form fieldset {
+		border: none;
+		padding-left: 10px;
+	}
+	
+		.form fieldset > .list-style-none li {
+			display: inherit;
+		}
+		
+		.form fieldset .table {
+			border-radius: 0;
+		}
+		
+			.form fieldset .table thead th {
+				padding: 5px 0;
+			}
+		
+			.form fieldset .table tbody tr {
+				font-size: 0.8em;
+			}
+	
+		.form fieldset legend {
+			color: #CC3333;
+			font-style: italic;
+			font-weight: bold;
+			font-variant: small-caps;
+			padding: 10px 0;
+			margin-left: -5px;
+		}
+	
+		.form fieldset .list-options {
+			margin-bottom: 5px;
+		}
+		
+	.form label {
+		display: inline-block;
+		font-size: 0.75em;
+		font-weight: bold;
+		margin-left: 10px;
+		width: 200px;
+	}
+	
+		.form .input-line {
+			border-bottom: dashed 1px #d8d8d8;
+			padding: 5px 10px;
+		}
+		
+			.form .input-line:last-child {
+				border-bottom: none;
+			}
+	
+		.form .input-line.buttons {
+			margin: 10px 0;
+			text-align: center;
+		}
+	
+	.form .hint {
+		color: #888;
+		display: inline-block;
+		font-size: 0.75em;
+		margin: 7.5px 0 0 10px;
+		vertical-align: top;
+		width: 290px;
+	}
+	
+	.form input,
+	.form select,
+	.form textarea {
+		background-color: white;
+		border: solid 1px #b9b7b8;
+		border-radius: 3px;
+		font-size: 0.85em;
+		height: 19px;
+		padding: 5px;
+		width: 190px;
+		vertical-align: middle;
+	}
+	
+		.form textarea {
+			height: 220px;
+			resize: none;
+			width: 500px;
+			vertical-align: top;
+		}
+	
+		.form input[type=checkbox],
+		.form input[type=radio] {
+			height: auto;
+			width: auto;
+		}
+		
+		.form input[type=submit],
+		.form input[type=reset] {
+			background-color: #f0f0f0;
+			cursor: pointer;
+			font-size: 0.75em;
+			font-weight: bold;
+			height: auto;
+			min-width: 120px;
+		}
+		
+			.form input[type=submit]:hover,
+			.form input[type=reset]:hover {
+				border-color: #999;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+			}
+	
+		.form select {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+	
+		.form .file {
+			height: 26px;
+		}
+	
+	.form .errors {
+		color: #CD302B;
+		font-size: 0.7em;
+		margin: 5px 0 2.5px;
+		padding-left: 220px;
+	}
+	
+.tabs {
+	border-radius: 5px 0 0;
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 18.25%;
+	z-index: 1;
+}
+
+	.tabs li {
+		background-color: #f0f0f0;
+		border-bottom: solid 1px #ccc;
+		border-right: solid 1px #ccc;
+	}
+	
+		.tabs li a {
+			display: block;
+			font-size: 0.75em;
+			padding: 7.5px 20px 7.5px 15px;
+			text-decoration: none;
+		}		
+	
+		.tabs li.active {
+			border-right: none;
+			background-color: #F9F9F9;
+			font-weight: bold;
+		}
+
+#login-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+#login-form {
+	background: url("../images/logo-mini.png") no-repeat 235px 11px #eeeeee;
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	box-shadow: 1px 3px 3px #d6d6d6;
+	margin: -90px 0 0 -150px;
+	padding: 0 20px;
+	width: 300px;
+}
+	#login-form fieldset {
+		padding-left: 20px;
+	}
+
+		#login-form fieldset legend {
+			font-style: normal;
+			margin-left: -20px;
+		}
+
+	#login-form .input-line {
+		border: none;
+		margin: 2.5px 0;
+		padding: 0;
+	}
+
+	#login-form label {
+		width: 40px;
+	}
+	
+		#login-form label img {
+			position: relative;
+			top: 8px;
+		}
+		
+	#login-form .errors {
+		margin: 0;
+		padding-left: 58px;
+	}
+	
+.filter-form {
+	border-bottom: 1px solid #C6C6C6;
+	border-radius: 0;
+	padding: 0;
+	position: relative;
+	width: 99.98%;
+}	
+	
+	.filter-form fieldset {
+		border: none;
+		display: inline-block;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+		
+		.filter-form fieldset > ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+			.filter-form fieldset > ul li {
+				display: inline-block;
+			}
+		
+			.filter-form #fieldset-elements {
+				min-width: 77.5%;
+				max-width: 86%;
+			}
+			
+				.filter-form #fieldset-elements > ul li {
+					width: 237px;
+				}
+			
+				.filter-form #fieldset-elements label {
+					font-weight: normal;
+					width: 65px;
+				}
+				
+				.filter-form #fieldset-elements input,
+				.filter-form #fieldset-elements select {
+					height: 17px;
+					font-size: 0.75em;
+					margin: 0.25em 0.5em 0.25em 0.25em;
+					padding: 0.25em;
+					width: 145px;
+				}
+				
+					.filter-form #fieldset-elements input.active,
+					.filter-form #fieldset-elements select.active {
+						background-color: #FCF75E;
+					}
+				
+					.filter-form #fieldset-elements input[type=checkbox],
+					.filter-form #fieldset-elements input[type=radio] {
+						width: auto;
+					}
+					
+					.filter-form #fieldset-elements input.small {
+						font-size: 0.6em;
+						width: 64px;
+					}
+					
+					.filter-form #fieldset-elements label.small {
+						margin-left: 0;
+						width: 6px;
+					}
+					
+					.filter-form #fieldset-elements .auto-width {
+						width: auto;
+					}
+			
+			.filter-form #fieldset-buttons {
+				min-width: 13.5%;
+				position: absolute;
+				top: 1px;
+				text-align: center;
+				vertical-align: top;
+			}
+				
+					.filter-form #fieldset-buttons ul li input[type=submit],
+					.filter-form #fieldset-buttons ul li input[type=reset] {
+						font-size: 0.70em;
+						margin: 0.25em;
+						width: 120px;
+					}

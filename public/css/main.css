@@ -1,0 +1,1072 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+body {
+	background-color: #fdfdfd;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	color: inherit;
+	outline: none;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+#body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#header,
+#content,
+#breadcrumbs {
+	margin: 0 auto;
+	min-width: 960px;
+	max-width: 1280px;
+	width: 90%;
+}
+
+#content {
+	margin-bottom: 20px;
+}
+
+#footer {
+	border-top: solid 1px #B6B6B6;
+	color: #000;
+	font-size: 0.75em;
+	font-style: italic;
+	padding: 0.5em 0;
+	text-align: center; 
+}
+
+body {
+    margin-top: 2.25em;
+}
+
+#license {
+    background-color: #DC143C;
+    background-image: -webkit-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:    -moz-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:     -ms-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:      -o-linear-gradient(to bottom, #DC143C, #CD5C5C);
+    background-image:         linear-gradient(to bottom, #DC143C, #CD5C5C);
+    border: 1px solid #B22222;
+    color: #F8F8F8;
+    display: block !important;
+    font-weight: bold;
+    padding: .5em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align:center;
+}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.none {
+	display: none;
+}
+
+.list-style-none {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.list-style-none li {
+		display: inline-block;
+	}
+
+.float-fix {
+	clear: both;
+}
+
+.box-gradient {
+	background-color: #FFFFFF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#C7C7C7)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #C7C7C7); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:     -moz-linear-gradient(top, #FFFFFF, #C7C7C7); /* FF3.6 */
+	background-image:       -ms-linear-gradient(top, #FFFFFF, #C7C7C7); /* IE10 */
+	background-image:         -o-linear-gradient(top, #FFFFFF, #C7C7C7); /* Opera 11.10+ */
+	background-image:          	  linear-gradient(top, #FFFFFF, #C7C7C7);
+}
+
+
+.message-container {
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.75em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+	.message-container p {
+		background: url("../images/icons/info.png") 10px center no-repeat transparent;
+		margin: 0.25em 0;
+		padding: 5px 10px 5px 35px; 
+	}
+
+	.message-container.information {
+		background-color: #849FC2;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#849FC2), to(#6683B3));   
+ 		background-image: -webkit-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image:    -moz-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image:     -ms-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image:      -o-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image: linear-gradient(to bottom, #849FC2, #6683B3);
+	}
+	
+	.message-container.success {
+		background-color: #59D41C;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#59D41C), to(#3F9415));   
+ 		background-image: -webkit-linear-gradient(top, #59D41C, #3F9415);   
+ 		background-image:    -moz-linear-gradient(top, #59D41C, #3F9415);   
+  		background-image:     -ms-linear-gradient(top, #59D41C, #3F9415);   
+  		background-image:      -o-linear-gradient(top, #59D41C, #3F9415);   
+  		background-image: linear-gradient(to bottom, #59D41C, #3F9415);
+	}
+
+	.message-container.warning {
+		background-color: #EEE111;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#EEE111), to(#DDD333));   
+ 		background-image: -webkit-linear-gradient(top, #EEE111, #DDD333);   
+ 		background-image:    -moz-linear-gradient(top, #EEE111, #DDD333);   
+  		background-image:     -ms-linear-gradient(top, #EEE111, #DDD333);   
+  		background-image:      -o-linear-gradient(top, #EEE111, #DDD333);   
+  		background-image: linear-gradient(to bottom, #EEE111, #DDD333);
+	}
+	
+	.message-container.error {
+		background-color: #EE0000;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#EE0000), to(#EE1133));   
+ 		background-image: -webkit-linear-gradient(top, #EE0000, #EE1133);   
+ 		background-image:    -moz-linear-gradient(top, #EE0000, #EE1133);   
+  		background-image:     -ms-linear-gradient(top, #EE0000, #EE1133);   
+  		background-image:      -o-linear-gradient(top, #EE0000, #EE1133);   
+  		background-image: linear-gradient(to bottom, #EE0000, #EE1133);
+	}	
+
+.width100 {
+	width: 100px;
+}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+#dashboard-news {
+    list-style-type: none;
+    padding: 0;
+}
+
+    #dashboard-news li {
+        background: -webkit-linear-gradient(top, #F0F0F0 10%, white);
+        background: -moz-linear-gradient(top, #F0F0F0 10%, white);
+        background: -o-linear-gradient(top, #F0F0F0 10%, white);
+        background: -ms-linear-gradient(top, #F0F0F0 10%, white);
+        background: linear-gradient(top, #F0F0F0 10%, white);
+        
+        border: solid 1px #C6C6C6;
+        border-radius: 5px;
+        margin: 1em 0;
+        padding: 0.5em;
+    }
+    
+        #dashboard-news li dt {
+            border-bottom: solid 1px #C6C6C6;
+            font-size: 0.85em;
+            text-indent: 0.25em;   
+        }
+        
+            #dashboard-news li dt .news-date {
+                font-weight: bold;
+                margin-right: 0.5em;
+            }
+            
+            #dashboard-news li dt .news-title {
+                font-style: italic;
+            }
+            
+             #dashboard-news li dt .news-author {
+                float: right;
+                font-weight: bold;
+            }
+    
+        #dashboard-news li dd {
+            font-size: 0.8em;
+            margin: 0;
+            text-indent: 1em;
+        }
+        
+a.attachment {
+    background: url('../images/icons/attachment.png') left center no-repeat transparent;
+    padding-left: 20px;
+}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+#document {
+	display: inline-block;
+	 font-size: 0.75em;
+}
+
+.qq-upload-drop-area {
+	display: none;
+}
+
+.qq-upload-button {
+	background-image: url("../images/icons/add.png");
+	background-color: #FAFAFA;
+    background-position: 7.5px center;
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px 5px 30px;
+    text-decoration: none;
+}
+
+	.form .qq-upload-button input {
+		height: 32px;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	.qq-upload-button * {
+		cursor: pointer;
+	}
+
+.qq-upload-list {
+	color: #888888;
+	display: inline-block;
+	font-size: 0.9em;
+	list-style-type: none;
+	margin: 0.75em 0 0 0.5em;
+	padding: 0;
+	vertical-align: top;
+}
+
+		.form fieldset > .list-style-none .qq-upload-list li {
+			display: list-item;
+		}
+
+		.qq-upload-list li span {
+			display: inline-block;
+			margin: 0 0.5em;
+		}
+		
+		.qq-upload-list li span.qq-upload-failed-text {
+			display: none;
+		}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+.form-container {
+	background-color: #fdfdfd;
+	border: solid 1px #ccc;
+	border-radius: 5px;
+}
+
+	.form {
+		background-color: #F9F9F9;
+		border-left: solid 1px #ccc;
+		border-radius: 0 5px 5px 0;
+		display: inline-block;
+		margin-left: -1px;
+		padding: 0 1%;
+		position: relative;
+		vertical-align: top;
+		width: 79.75%;
+	}
+	
+		.layer .form {
+			width: 98%;
+		}
+
+	.form .form-info {
+		color: #777;
+		font-size: 0.7em;
+		font-style: italic;
+		position: absolute;
+		top: 0;
+		right: 20px;
+	}
+
+	.form fieldset {
+		border: none;
+		padding-left: 10px;
+	}
+	
+		.form fieldset > .list-style-none li {
+			display: inherit;
+		}
+		
+		.form fieldset .table {
+			border-radius: 0;
+		}
+		
+			.form fieldset .table thead th {
+				padding: 5px 0;
+			}
+		
+			.form fieldset .table tbody tr {
+				font-size: 0.8em;
+			}
+	
+		.form fieldset legend {
+			color: #CC3333;
+			font-style: italic;
+			font-weight: bold;
+			font-variant: small-caps;
+			padding: 10px 0;
+			margin-left: -5px;
+		}
+	
+		.form fieldset .list-options {
+			margin-bottom: 5px;
+		}
+		
+	.form label {
+		display: inline-block;
+		font-size: 0.75em;
+		font-weight: bold;
+		margin-left: 10px;
+		width: 200px;
+	}
+	
+		.form .input-line {
+			border-bottom: dashed 1px #d8d8d8;
+			padding: 5px 10px;
+		}
+		
+			.form .input-line:last-child {
+				border-bottom: none;
+			}
+	
+		.form .input-line.buttons {
+			margin: 10px 0;
+			text-align: center;
+		}
+	
+	.form .hint {
+		color: #888;
+		display: inline-block;
+		font-size: 0.75em;
+		margin: 7.5px 0 0 10px;
+		vertical-align: top;
+		width: 290px;
+	}
+	
+	.form input,
+	.form select,
+	.form textarea {
+		background-color: white;
+		border: solid 1px #b9b7b8;
+		border-radius: 3px;
+		font-size: 0.85em;
+		height: 19px;
+		padding: 5px;
+		width: 190px;
+		vertical-align: middle;
+	}
+	
+		.form textarea {
+			height: 220px;
+			resize: none;
+			width: 500px;
+			vertical-align: top;
+		}
+	
+		.form input[type=checkbox],
+		.form input[type=radio] {
+			height: auto;
+			width: auto;
+		}
+		
+		.form input[type=submit],
+		.form input[type=reset] {
+			background-color: #f0f0f0;
+			cursor: pointer;
+			font-size: 0.75em;
+			font-weight: bold;
+			height: auto;
+			min-width: 120px;
+		}
+		
+			.form input[type=submit]:hover,
+			.form input[type=reset]:hover {
+				border-color: #999;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+			}
+	
+		.form select {
+			-moz-box-sizing: content-box;
+			box-sizing: content-box;
+		}
+	
+		.form .file {
+			height: 26px;
+		}
+	
+	.form .errors {
+		color: #CD302B;
+		font-size: 0.7em;
+		margin: 5px 0 2.5px;
+		padding-left: 220px;
+	}
+	
+.tabs {
+	border-radius: 5px 0 0;
+	display: inline-block;
+	list-style-type: none;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	width: 18.25%;
+	z-index: 1;
+}
+
+	.tabs li {
+		background-color: #f0f0f0;
+		border-bottom: solid 1px #ccc;
+		border-right: solid 1px #ccc;
+	}
+	
+		.tabs li a {
+			display: block;
+			font-size: 0.75em;
+			padding: 7.5px 20px 7.5px 15px;
+			text-decoration: none;
+		}		
+	
+		.tabs li.active {
+			border-right: none;
+			background-color: #F9F9F9;
+			font-weight: bold;
+		}
+
+#login-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+}
+
+#login-form {
+	background: url("../images/logo-mini.png") no-repeat 235px 11px #eeeeee;
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	box-shadow: 1px 3px 3px #d6d6d6;
+	margin: -90px 0 0 -150px;
+	padding: 0 20px;
+	width: 300px;
+}
+	#login-form fieldset {
+		padding-left: 20px;
+	}
+
+		#login-form fieldset legend {
+			font-style: normal;
+			margin-left: -20px;
+		}
+
+	#login-form .input-line {
+		border: none;
+		margin: 2.5px 0;
+		padding: 0;
+	}
+
+	#login-form label {
+		width: 40px;
+	}
+	
+		#login-form label img {
+			position: relative;
+			top: 8px;
+		}
+		
+	#login-form .errors {
+		margin: 0;
+		padding-left: 58px;
+	}
+	
+.filter-form {
+	border-bottom: 1px solid #C6C6C6;
+	border-radius: 0;
+	padding: 0;
+	position: relative;
+	width: 99.98%;
+}	
+	
+	.filter-form fieldset {
+		border: none;
+		display: inline-block;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+		
+		.filter-form fieldset > ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+			.filter-form fieldset > ul li {
+				display: inline-block;
+			}
+		
+			.filter-form #fieldset-elements {
+				min-width: 77.5%;
+				max-width: 86%;
+			}
+			
+				.filter-form #fieldset-elements > ul li {
+					width: 237px;
+				}
+			
+				.filter-form #fieldset-elements label {
+					font-weight: normal;
+					width: 65px;
+				}
+				
+				.filter-form #fieldset-elements input,
+				.filter-form #fieldset-elements select {
+					height: 17px;
+					font-size: 0.75em;
+					margin: 0.25em 0.5em 0.25em 0.25em;
+					padding: 0.25em;
+					width: 145px;
+				}
+				
+					.filter-form #fieldset-elements input.active,
+					.filter-form #fieldset-elements select.active {
+						background-color: #FCF75E;
+					}
+				
+					.filter-form #fieldset-elements input[type=checkbox],
+					.filter-form #fieldset-elements input[type=radio] {
+						width: auto;
+					}
+					
+					.filter-form #fieldset-elements input.small {
+						font-size: 0.6em;
+						width: 64px;
+					}
+					
+					.filter-form #fieldset-elements label.small {
+						margin-left: 0;
+						width: 6px;
+					}
+					
+					.filter-form #fieldset-elements .auto-width {
+						width: auto;
+					}
+			
+			.filter-form #fieldset-buttons {
+				min-width: 13.5%;
+				position: absolute;
+				top: 1px;
+				text-align: center;
+				vertical-align: top;
+			}
+				
+					.filter-form #fieldset-buttons ul li input[type=submit],
+					.filter-form #fieldset-buttons ul li input[type=reset] {
+						font-size: 0.70em;
+						margin: 0.25em;
+						width: 120px;
+					}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+#header-background {
+	border-bottom: solid 1px #b6b6b6;
+	height: 75px;
+}
+
+#logo {
+	float: left;
+	margin: 10px 0 0 12.5px;
+}
+
+	#logo img {
+		height: 30px;
+	}
+
+#nav-panel {
+	background: url("../images/panel-avatar.png") no-repeat 5px 5px #4e4a4c;
+	border-color: #181818;
+	border-style: solid;
+	border-width: 0 1px 1px 1px;
+	border-radius: 0 0 5px 5px;
+	color: white;
+	float: right;
+	font-size: 0.7em;
+	font-weight: bold;
+	line-height: 27px;
+	height: 25px;
+	margin: 0 20px 20px 0;
+	padding-left: 35px;
+}
+
+	#nav-panel li {
+		margin-right: 10px;
+	}
+	
+		#nav-panel li span {
+			color: #b6b6b6;
+			display: inline-block;
+			font-style: italic;
+			margin-left: 5px;
+		}
+
+#main-menu {
+	background-color: #eaeaea;
+	border: solid 1px #b6b6b6;
+	border-radius: 5px;
+	box-shadow: 1px 3px 3px #d6d6d6;
+	clear: right;
+	color: #181818;
+	display: inline-block;
+	float: right;
+	height: 40px;
+}
+
+	#main-menu ul {
+		display: inline-block;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+		#main-menu ul li {
+			display: inline-block;
+			font-size: 0.7em;
+			line-height: 40px;
+			height: 40px;
+			padding: 0 15px;
+		}
+		
+			#main-menu ul li.active {
+				color: #cd302b;
+				text-decoration: underline;
+			}
+			
+		#main-menu ul ul {
+			display: none;
+		}
+		
+#breadcrumbs {
+	font-size: 0.75em;
+	font-style: italic;
+	margin: 30px auto 5px ;
+	padding-left: 20px;
+}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+.info {
+	background-color: #fdfdfd;
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	position: relative;
+}
+
+	.info h4 {
+		border-bottom: solid 1px #c6c6c6;
+		border-radius: 5px 5px 0 0;
+		font-style: italic;
+		margin: 0;
+		padding: 12.5px 12.5px 12.5px 53px;
+	}
+	
+	   .info h4.dashboard {
+            background: url("../images/info-icons/dashboard.png") no-repeat 12.5px 7.5px #F0F0F0; 
+        }
+	
+		.info h4.customers {
+			background: url("../images/info-icons/customers.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.applications {
+			background: url("../images/info-icons/applications.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.employees {
+			background: url("../images/info-icons/employees.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.settlements {
+			background: url("../images/info-icons/settlements.png") no-repeat 12.5px 7.5px #F0F0F0;
+		}
+		
+		.info h4.recruitment {
+			background: url("../images/info-icons/recruitment.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.partners {
+			background: url("../images/info-icons/partners.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.products {
+			background: url("../images/info-icons/products.png") no-repeat 12.5px 7.5px #F0F0F0; 
+		}
+		
+		.info h4.news {
+            background: url("../images/info-icons/news.png") no-repeat 12.5px 7.5px #F0F0F0; 
+        }
+		
+		.info h4.configuration {
+			background: url("../images/info-icons/configuration.png") no-repeat 12.5px 7.5px #F0F0F0; 
+			border: none;
+			border-radius: 5px;
+		}
+	
+	.info .related-links {
+		font-size: 0.75em;
+		height: 47px;
+		line-height: 47px;
+		list-style-type: none;
+		margin: 0 10px 0 0;
+		padding: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		vertical-align: middle;
+	}
+	
+		.info .related-links li {
+			display: inline-block;
+		}
+	
+		.info .related-links li:first-child {
+			color: #777777;
+			padding-right: 5px;
+		}
+		
+			.info .related-links a {
+				border-right: solid 1px #aaa;
+				color: #cd302b;
+				margin-right: 5px;
+				padding-right: 5px;
+			}
+			
+			.info .related-links li:last-child a {
+				border: none;
+			}
+			
+.list-options {
+	font-size: 0.75em;
+	padding: 5px 10px;
+}
+
+	.list-options li {
+		margin-right: 10px;
+	}
+
+	.list-options a {
+		background-color: #fafafa;
+		background-position: 7.5px center;
+		background-repeat: no-repeat;
+	    border: 1px solid #ccc;
+	    border-radius: 3px;
+	    cursor: pointer;
+	    display: inline-block;
+	    line-height: 20px;
+	    padding: 5px 10px 5px 30px;
+	    text-decoration: none;
+	}
+	
+	.list-options a:hover {
+	    border-color: #999999;
+	    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 0 3px #FFFFFF inset;
+	}
+	
+	.list-options .add a {
+		background-image: url("../images/icons/add.png");
+	}
+	
+	.list-options .back a {
+		background-image: url("../images/icons/back.png");
+	}
+	
+	.list-options .delete a {
+		background-image: url("../images/icons/delete.png");
+	}
+	
+	.list-options .print a {
+		background-image: url("../images/icons/print.png");
+	}
+	
+	.list-options .change-to-employee a {
+		background-image: url("../images/icons/change_to_employee.png");
+	}
+
+.paginationControl {
+	font-size: 0.85em;
+	margin-bottom: 2.5px;
+	padding: 5px;
+	position: relative;
+	text-align: center;
+}
+
+	.paginationControl .total-item-count {
+		font-size: 0.85em;
+		position: absolute;
+		left: 5px;
+		top: 5px;
+	}
+	
+	.paginationControl a {
+		display: inline-block;
+		margin: 0 2.5px;
+	}
+	
+		.paginationControl .current-page {
+			color: #CD302B;
+			font-weight: bold;
+		}
+	
+	.paginationControl .arrow {
+		display: inline-block;
+		margin: 0 5px;
+	}
+	
+	.paginationControl .items-per-page {
+		display: inline-block;
+		font-size: 0.85em;
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	
+		.paginationControl fieldset {
+			border: none;
+			padding: 0;
+			margin: 0;
+		}
+		
+			.paginationControl fieldset select {
+				border: 1px solid #B9B7B8;
+				border-radius: 3px;
+				margin-left: 5px;
+			}
+
+.table {
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	border-spacing: 0;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+	.table thead th {
+		background-color: #F0F0F0;
+		border-bottom: solid 1px #c6c6c6;
+		border-radius: 5px 5px 0 0;
+		font-size: 0.70em;
+	}
+	
+		.table thead .id,
+		.table thead .activity {
+			width: 70px;
+		}
+		
+		.table thead .actions {
+			width: 100px;
+		}	
+		
+		.table thead a.asc,
+		.table thead a.desc {
+			background-position: center right;
+			background-repeat: no-repeat;
+			display: inline-block;
+			padding: 1em 20px 1em 0;
+		}
+		
+		.table thead a.desc {
+			background-image: url("../images/arrow-up.png");
+		}
+		
+		.table thead a.asc {
+			background-image: url("../images/arrow-down.png");
+		}
+	
+	.table tbody tr {
+		font-size: 0.9em;
+	}
+	
+	.table tbody tr.color-0 {
+		background-color: #F3F3F3;
+	}
+	
+		.table tbody td {
+			padding: 3px 0;
+		}
+		
+	.table .actions li {
+		margin-right: 2.5px;
+	}	
+	
+		.table .actions li:last-child {
+			margin-right: 0;
+		}
+		
+		.table .actions li a {
+			display: inline-block;
+			height: 16px;
+			width: 16px;
+		}
+		
+		.table .actions .edit {
+			background: url("../images/icons/edit.png") center center no-repeat transparent;
+		}
+		
+		.table .actions .delete {
+			background: url("../images/icons/delete.png") center center no-repeat transparent;
+		}
+		
+		.table .actions .print {
+			background: url("../images/icons/print.png") center center no-repeat transparent;
+		}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+#ajax-result {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 22.5%;
+	z-index: 100;
+	width: 795px;
+}
+
+#ajax-result-mask {
+	background-color: #333;
+	display: none;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+.layer-container {
+	position: relative;
+}
+
+	.layer-container .layer-close {
+		cursor: pointer;
+		position: absolute;
+		top: -13px;
+		right: -13px;
+		z-index: 101;
+	}
+	
+		.layer-container .layer {
+			border: solid 5px #dfdfdf;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+		
+		.layer-container .layer .message-container {
+		    border-radius: 0;
+		    margin-bottom: 0;
+		}
+		
+		.layer-container .form-container {
+			border-radius: 0;
+		}
+	
+			.layer-container .form-container .tabs {
+				display: none;
+			}
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+
+#ui-datepicker-div {
+	font-size: 0.725em;
+}
+
+#description_parent {
+	display: inline-block;
+	vertical-align: top;
+}
+
+	#description_tbl,
+	#description_tbl tbody {
+		border-radius: 3px;
+	}
+	
+	#description_tbl tbody tr.mceFirst,
+	#description_tbl tbody tr.mceFirst td {
+		border-radius: 3px 3px 0 0;
+	}
+	
+	#description_tbl tbody tr.mceLast,
+	#description_tbl tbody tr.mceLast td,
+	#description_tbl tbody tr.mceLast td iframe {
+		border-radius:  0 0 3px 3px;
+	}
+	
+.mceEditor {
+    display: inline-block;
+    vertical-align: top;
+}

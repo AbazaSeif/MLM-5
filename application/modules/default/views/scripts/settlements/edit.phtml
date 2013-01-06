@@ -1,0 +1,37 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<div class="info">
+	<h4 class="settlements">Rozliczenia</h4>
+	<?php echo $this->relatedLinks(); ?>
+	<ul class="list-options list-style-none">
+	    <li class="back"><a href="/settlements">Wróć do listy</a></li>
+		<li class="add"><a href="/settlements/addBonus/<?php echo $this->settlementId; ?>">Dodaj premie</a>
+	</ul>
+</div>
+<?php echo $this->flashMessenger(); ?>
+<?php echo $this->partial("paginator.phtml", $this->paginator->getPages()); ?>
+
+<?php if ($this->paginator->getTotalItemCount()) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Pracownik</th>
+				<th>Email</th>
+				<th>Data utworzenia</th>
+				<th>Kwota</th>
+				<th>Transza</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php echo $this->partialLoop("settlements/partials/edit-list-item.phtml", $this->paginator); ?>
+		</tbody>
+	</table>
+<?php endif; ?>

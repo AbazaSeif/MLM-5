@@ -1,0 +1,58 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+#ajax-result {
+	display: none;
+	position: absolute;
+	top: 20px;
+	left: 22.5%;
+	z-index: 100;
+	width: 795px;
+}
+
+#ajax-result-mask {
+	background-color: #333;
+	display: none;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+
+.layer-container {
+	position: relative;
+}
+
+	.layer-container .layer-close {
+		cursor: pointer;
+		position: absolute;
+		top: -13px;
+		right: -13px;
+		z-index: 101;
+	}
+	
+		.layer-container .layer {
+			border: solid 5px #dfdfdf;
+			border-radius: 5px;
+			overflow: hidden;
+		}
+		
+		.layer-container .layer .message-container {
+		    border-radius: 0;
+		    margin-bottom: 0;
+		}
+		
+		.layer-container .form-container {
+			border-radius: 0;
+		}
+	
+			.layer-container .form-container .tabs {
+				display: none;
+			}

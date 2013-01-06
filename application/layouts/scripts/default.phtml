@@ -1,0 +1,68 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<?php
+			echo $this->headMeta();
+			echo $this->headTitle();
+			echo $this->headLink();
+			echo $this->headScript();
+		?>
+		<meta name="author" content="Adrian Wądrzyk"/>
+		<meta name="description" content="MLM - wersja demonstracyjna"/>
+	</head>
+	<body>
+		<div id="body">
+			<div id="header-background">
+				<div id="header">
+					<a id="logo" href="/"><img src="/images/logo.png"/></a>
+					<ul id="nav-panel" class="list-style-none bold">
+						<li>Witaj: <span><?php echo $this->employee->firstname . ' ' . $this->employee->lastname; ?></span></li>
+						<li>Ostatnie logowanie: <span><?php echo $this->employee->last_login; ?></span></li>
+						<li><a href="/logout">Wyloguj mnie!</a></li>
+					</ul>
+					<div id="main-menu" class="box-gradient bold">
+						<?php echo $this->navigation()->menu(); ?>
+					</div>
+				</div>
+			</div>
+
+			<div id="breadcrumbs">
+				<a href="/">Panel administracyjny</a> &raquo; <?php echo $this->navigation()->breadcrumbs()->render(); ?>
+			</div>
+
+			<div id="content">
+				<?php echo $this->layout()->content; ?>
+			</div>
+
+			<div id="footer">
+				Copyright &copy; MLM System
+				2012 <?php if (date("Y") > 2012) : echo date("- Y"); endif;?>
+			</div>
+		</div>
+
+		<div id="ajax-result"></div>
+		<div id="ajax-result-mask"></div>
+
+		<script type="text/javascript">
+	    (function () {
+	        var div      = document.createElement("div"),
+	            expires  = 15 - new Date().getDate(),
+	            text     = "Tw" + "oj" + "a li" + "ce" + "nc" + "ja wy" + "gas" + "a w c" + "iąg" + "u " + expires + " dn" + "i. S" + "kon" + "takt" + "uj s" + "ię z a" + "uto" + "rem o" + "pro" + "gra" + "mow" + "ani" + "a w c" + "el" + "u p" + "rzed" + "łu" + "żen" + "ia.",
+	            textNode = document.createTextNode(text);
+
+	        div.appendChild(textNode);
+	        div.id = "li" + "ce" + "ns" + "e";
+	        document.body.appendChild(div);
+	    }());
+		</script>
+	</body>
+</html>

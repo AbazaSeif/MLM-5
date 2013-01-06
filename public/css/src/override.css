@@ -1,0 +1,36 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+
+#ui-datepicker-div {
+	font-size: 0.725em;
+}
+
+#description_parent {
+	display: inline-block;
+	vertical-align: top;
+}
+
+	#description_tbl,
+	#description_tbl tbody {
+		border-radius: 3px;
+	}
+	
+	#description_tbl tbody tr.mceFirst,
+	#description_tbl tbody tr.mceFirst td {
+		border-radius: 3px 3px 0 0;
+	}
+	
+	#description_tbl tbody tr.mceLast,
+	#description_tbl tbody tr.mceLast td,
+	#description_tbl tbody tr.mceLast td iframe {
+		border-radius:  0 0 3px 3px;
+	}
+	
+.mceEditor {
+    display: inline-block;
+    vertical-align: top;
+}

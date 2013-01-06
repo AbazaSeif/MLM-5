@@ -1,0 +1,53 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->getIdentifier()) : ?>
+	<ul class="list-options list-style-none ajax-options">
+		<li class="add"><a href="/layer/customer-old-products/add/<?php echo $this->model->getIdentifier(); ?>">Dodaj produkt</a></li>
+	</ul>
+<?php endif; ?>
+<?php if ($this->model->oldProducts->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Instrument</th>
+				<th>Instytucja</th>
+				<th>Suma ubezpieczenia</th>
+				<th>Wartość</th>
+				<th>Wkład</th>
+				<th>Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->oldProducts as $product) : ?>
+				<tr>
+					<td><?php echo $product->getIdentifier(); ?></td>
+					<td><?php echo $product->instruction->name; ?></td>
+					<td><?php echo $product->institution->name; ?></td>
+					<td><?php echo $product->insuranceSum; ?></td>
+					<td><?php echo $product->amount; ?></td>
+					<td><?php echo $product->contribution; ?></td>
+					<td>
+						<ul class="list-style-none actions ajax-options">
+							<li class="edit">
+								<a href="/layer/customer-old-products/edit/<?php echo $product->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="edytuj" title="edytuj"></a>
+							</li>
+							<li class="delete">
+								<a href="/layer/customer-old-products/delete/<?php echo $product->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="usuń" title="usuń"></a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

@@ -1,0 +1,102 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+.bold {
+	font-weight: bold;
+}
+
+.center {
+	text-align: center;
+}
+
+.none {
+	display: none;
+}
+
+.list-style-none {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+	.list-style-none li {
+		display: inline-block;
+	}
+
+.float-fix {
+	clear: both;
+}
+
+.box-gradient {
+	background-color: #FFFFFF;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#C7C7C7)); /* Saf4+, Chrome */
+	background-image: -webkit-linear-gradient(top, #FFFFFF, #C7C7C7); /* Chrome 10+, Saf5.1+, iOS 5+ */
+	background-image:     -moz-linear-gradient(top, #FFFFFF, #C7C7C7); /* FF3.6 */
+	background-image:       -ms-linear-gradient(top, #FFFFFF, #C7C7C7); /* IE10 */
+	background-image:         -o-linear-gradient(top, #FFFFFF, #C7C7C7); /* Opera 11.10+ */
+	background-image:          	  linear-gradient(top, #FFFFFF, #C7C7C7);
+}
+
+
+.message-container {
+	border: solid 1px #c6c6c6;
+	border-radius: 5px;
+	color: white;
+	font-size: 0.75em;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+	.message-container p {
+		background: url("../images/icons/info.png") 10px center no-repeat transparent;
+		margin: 0.25em 0;
+		padding: 5px 10px 5px 35px; 
+	}
+
+	.message-container.information {
+		background-color: #849FC2;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#849FC2), to(#6683B3));   
+ 		background-image: -webkit-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image:    -moz-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image:     -ms-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image:      -o-linear-gradient(top, #849FC2, #6683B3);   
+  		background-image: linear-gradient(to bottom, #849FC2, #6683B3);
+	}
+	
+	.message-container.success {
+		background-color: #59D41C;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#59D41C), to(#3F9415));   
+ 		background-image: -webkit-linear-gradient(top, #59D41C, #3F9415);   
+ 		background-image:    -moz-linear-gradient(top, #59D41C, #3F9415);   
+  		background-image:     -ms-linear-gradient(top, #59D41C, #3F9415);   
+  		background-image:      -o-linear-gradient(top, #59D41C, #3F9415);   
+  		background-image: linear-gradient(to bottom, #59D41C, #3F9415);
+	}
+
+	.message-container.warning {
+		background-color: #EEE111;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#EEE111), to(#DDD333));   
+ 		background-image: -webkit-linear-gradient(top, #EEE111, #DDD333);   
+ 		background-image:    -moz-linear-gradient(top, #EEE111, #DDD333);   
+  		background-image:     -ms-linear-gradient(top, #EEE111, #DDD333);   
+  		background-image:      -o-linear-gradient(top, #EEE111, #DDD333);   
+  		background-image: linear-gradient(to bottom, #EEE111, #DDD333);
+	}
+	
+	.message-container.error {
+		background-color: #EE0000;
+		background-image: -webkit-gradient(linear, left top, left bottom, from(#EE0000), to(#EE1133));   
+ 		background-image: -webkit-linear-gradient(top, #EE0000, #EE1133);   
+ 		background-image:    -moz-linear-gradient(top, #EE0000, #EE1133);   
+  		background-image:     -ms-linear-gradient(top, #EE0000, #EE1133);   
+  		background-image:      -o-linear-gradient(top, #EE0000, #EE1133);   
+  		background-image: linear-gradient(to bottom, #EE0000, #EE1133);
+	}	
+
+.width100 {
+	width: 100px;
+}

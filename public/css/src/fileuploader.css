@@ -1,0 +1,64 @@
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+ 
+#document {
+	display: inline-block;
+	 font-size: 0.75em;
+}
+
+.qq-upload-drop-area {
+	display: none;
+}
+
+.qq-upload-button {
+	background-image: url("../images/icons/add.png");
+	background-color: #FAFAFA;
+    background-position: 7.5px center;
+    background-repeat: no-repeat;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    padding: 5px 10px 5px 30px;
+    text-decoration: none;
+}
+
+	.form .qq-upload-button input {
+		height: 32px;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	
+	.qq-upload-button * {
+		cursor: pointer;
+	}
+
+.qq-upload-list {
+	color: #888888;
+	display: inline-block;
+	font-size: 0.9em;
+	list-style-type: none;
+	margin: 0.75em 0 0 0.5em;
+	padding: 0;
+	vertical-align: top;
+}
+
+		.form fieldset > .list-style-none .qq-upload-list li {
+			display: list-item;
+		}
+
+		.qq-upload-list li span {
+			display: inline-block;
+			margin: 0 0.5em;
+		}
+		
+		.qq-upload-list li span.qq-upload-failed-text {
+			display: none;
+		}

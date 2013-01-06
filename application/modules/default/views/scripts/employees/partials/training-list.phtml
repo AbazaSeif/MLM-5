@@ -1,0 +1,40 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->getIdentifier()) : ?>
+	<ul class="list-options list-style-none ajax-options">
+		<li class="add"><a href="/layer/employee-trainings/add/<?php echo $this->model->getIdentifier(); ?>">Dodaj szkolenie</a></li>
+	</ul>
+<?php endif; ?>
+<?php if ($this->model->trainings->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="id">Id</th>
+				<th>Egzaminator</th>
+				<th>Tytuł</th>
+				<th>Data</th>
+				<th>Ocena</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->trainings as $training) : ?>
+				<tr>
+					<td><?php echo $training->getIdentifier(); ?></td>
+					<td><?php echo $training->examiner->lastname . " " . $training->examiner->firstname; ?></td>
+					<td><?php echo $training->training->title; ?></td>
+					<td><?php echo $training->createDate; ?></td>
+					<td><?php echo $training->mark; ?></td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>
