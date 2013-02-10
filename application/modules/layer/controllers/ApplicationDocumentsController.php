@@ -19,7 +19,7 @@ class Layer_ApplicationDocumentsController extends Zend_Controller_Action
 		$form = new Applications_DocumentForm($model);
 		if ($this->getHelper("FormAction")->simpleAction($form, $model, true)) {
 			$applicationDocument = new \Model\ApplicationDocument();
-			$applicationDocument->customer = $em->find("Customer", $form->getValue("parent"));
+			$applicationDocument->application = $em->find("Application", $form->getValue("parent"));
 			$applicationDocument->document = $model;
 			$em->persist($applicationDocument);
 			$this->getHelper("formAction")->simpleEndAction();

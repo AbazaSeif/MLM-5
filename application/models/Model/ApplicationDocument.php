@@ -8,7 +8,7 @@
 
 namespace Model;
 
-class ApplicationDocument extends \Entity\CustomerDocument
+class ApplicationDocument extends \Entity\ApplicationDocument
 {
 
 }

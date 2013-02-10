@@ -12,10 +12,12 @@ namespace Entity;
  * @property string title
  * @property string description
  * @property bool active
+ * @property Employee employee
  */
 class Training extends \Application\Entity\Entity
 {
 	protected $_title;
 	protected $_description;
 	protected $_active;
+	protected $_employee;
 }

@@ -26,10 +26,16 @@ class TrainingsController extends Zend_Controller_Action
 
     public function setModel(\Application\Form\Form $form, \Model\Training $model)
     {
+        $em = EntityManager::getInstance();
 		$values = $form->getValue("basic");
 		$model->title = $values['title'];
 		$model->description = $values['description'];
 		$model->active = $values['active'];
+		if (!empty($values['employee_id'])) {
+		    $model->employee = $em->find("Employee", $values['employee']);
+		} else {
+		    $model->employee = new \Model\Employee();
+		}
     }
 
     public function editAction()

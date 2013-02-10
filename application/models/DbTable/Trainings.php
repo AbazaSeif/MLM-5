@@ -16,4 +16,12 @@ class Trainings extends \Zend_Db_Table_Abstract
 	protected $_dependentTables = array(
 		"DbTable\EmployeeTrainigs"
 	);
+
+	protected $_referenceMap = array(
+	    "Employee" => array(
+	        "columns"				=> "employee_id",
+	        "refTableClass"		=> "DbTable\Employees",
+	        "refColumns"			=> "employee_id"
+	    )
+    );
 }

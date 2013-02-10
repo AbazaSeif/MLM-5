@@ -20,7 +20,8 @@ class Employees extends \Zend_Db_Table
 		"DbTable\Customers",
 		"DbTable\Applications",
 		"DbTable\ApplicationPercents",
-		"DbTable\Settlements"
+		"DbTable\Settlements",
+	    "DbTable\Trainings"
 	);
 
 	protected $_referenceMap = array(

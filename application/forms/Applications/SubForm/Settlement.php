@@ -39,8 +39,7 @@ class Applications_SubForm_Settlement extends \Application\Form\Subform
 		$this->addElement($element);
 
 		$element = $this->createElement("text", "investment_target");
-		$element->setRequired()
-			->addFilter("StringTrim")
+		$element->addFilter("StringTrim")
 			->setLabel("Cel inwestycyjny")
 			->setValue($this->getModel()->investmentTarget);
 		$this->addElement($element);

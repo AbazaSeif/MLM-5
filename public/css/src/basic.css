@@ -47,10 +47,6 @@ a {
 	text-align: center; 
 }
 
-body {
-    margin-top: 2.25em;
-}
-
 #license {
     background-color: #DC143C;
     background-image: -webkit-linear-gradient(to bottom, #DC143C, #CD5C5C);

@@ -28,6 +28,7 @@ class Privileges extends \Zend_Controller_Plugin_Abstract
 			|| $request->getControllerName() == "privilegese"
 		    || $request->getControllerName() == "index"
 		    || $request->getControllerName() == "error"
+		    || $request->getControllerName() == "document"
 		) {
 			return;
 		}

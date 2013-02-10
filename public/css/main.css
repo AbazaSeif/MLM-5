@@ -47,10 +47,6 @@ a {
 	text-align: center; 
 }
 
-body {
-    margin-top: 2.25em;
-}
-
 #license {
     background-color: #DC143C;
     background-image: -webkit-linear-gradient(to bottom, #DC143C, #CD5C5C);
@@ -968,6 +964,10 @@ a.attachment {
 		.table .actions .edit {
 			background: url("../images/icons/edit.png") center center no-repeat transparent;
 		}
+		
+		.table .actions .products {
+            background: url("../images/icons/products.png") center center no-repeat transparent;
+        }
 		
 		.table .actions .delete {
 			background: url("../images/icons/delete.png") center center no-repeat transparent;

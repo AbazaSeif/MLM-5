@@ -8,6 +8,8 @@
 
 namespace DataMapper;
 
+use \Application\Entity\EntityManager;
+
 class Training extends \Application\DataMapper\DataMapper
 {
 	protected $_dbTable = "DbTable\Trainings";
@@ -22,6 +24,13 @@ class Training extends \Application\DataMapper\DataMapper
 		$model = new \Model\Training();
 		$row = $this->getDbTable()-> find($id)->current();
 		$this->_simpleMap($model, $row);
+
+		$em = EntityManager::getInstance();
+		if (!empty($row['employee_id'])) {
+		    $model->employee = $em->find("Employee", $row['employee_id']);
+		} else {
+		    $model->employee = new \Model\Employee();
+		}
 		return $model;
 	}
 
@@ -30,7 +39,8 @@ class Training extends \Application\DataMapper\DataMapper
 		$data = array(
 			"title" => $model->title,
 			"description" => $model->description,
-			"active" => $model->active
+			"active" => $model->active,
+		    "employee_id" => $model->employee->getIdentifier()
 		);
 
 		$id = $this->getDbTable()->insert($data);
@@ -42,7 +52,8 @@ class Training extends \Application\DataMapper\DataMapper
 		$data = array(
 			"title" => $model->title,
 			"description" => $model->description,
-			"active" => $model->active
+			"active" => $model->active,
+		    "employee_id" => $model->employee->getIdentifier()
 		);
 
 		$this->getDbTable()->update($data, "training_id = " . $model->getIdentifier());
