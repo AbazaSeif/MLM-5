@@ -24,6 +24,7 @@ namespace Entity;
  * @property string nip
  * @property string regon
  * @property Employee employee
+ * @property CustomerHistory history
  * @property CustomerStatus status
  * @property string recommendingPerson
  * @property date dateOfLastAnalysis;
@@ -55,6 +56,7 @@ class Customer extends \Application\Entity\Entity
 	protected $_pesel;
 	protected $_nip;
 	protected $_regon;
+	protected $_history;
 
 	/**
 	 * @var Employee

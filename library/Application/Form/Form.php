@@ -12,6 +12,7 @@ namespace Application\Form;
  * Form
  */
 use DataMapper\Application;
+use \Application\Access\Manager;
 
 abstract class Form extends \Zend_Form
 {
@@ -50,22 +51,27 @@ abstract class Form extends \Zend_Form
 
 	public function render(\Zend_View $view = null, $withSubmitButton = true)
 	{
-		$element = $this->createElement("submit", "submit");
-		$element->setLabel("Zapisz")
-			->setIgnore(true)
-			->setDecorators(
-				array(
-					"ViewHelper",
-					array(
-						"HtmlTag",
-						array(
-							"tag" 	=> "div",
-							"class" 	=> "input-line buttons"
-						)
-					)
-				)
-			);
-		$this->addElement($element);
+	    $request = \Zend_Controller_Front::getInstance()->getRequest();
+	    $hasPrivilege = \Application\Controller\Plugin\Privileges::hasPrivilige($request, Manager::ACTION_UPDATE);
+
+	    if ($hasPrivilege) {
+    		$element = $this->createElement("submit", "submit");
+    		$element->setLabel("Zapisz")
+    			->setIgnore(true)
+    			->setDecorators(
+    				array(
+    					"ViewHelper",
+    					array(
+    						"HtmlTag",
+    						array(
+    							"tag" 	=> "div",
+    							"class" 	=> "input-line buttons"
+    						)
+    					)
+    				)
+    			);
+    		$this->addElement($element);
+	    }
 
 		return parent::render($view);
 	}

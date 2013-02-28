@@ -25,6 +25,7 @@ class Customers_Form extends \Application\Form\Form
 		$this->addTab("product-old-list", "Stare produkty", "customers/partials/product-old-list.phtml");
 		$this->addTab("product-list", "Posiadane produkty", "customers/partials/product-list.phtml");
 		$this->addTab("credit-old-list", "Stare kredyty", "customers/partials/credit-old-list.phtml");
+		$this->addTab("history-list", "Historia", "customers/partials/history-list.phtml");
 		$this->addTab("renouncement-list", "Odstąpienia", "customers/partials/renouncement-list.phtml");
 	}
 }

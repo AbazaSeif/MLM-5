@@ -100,3 +100,7 @@
 .width100 {
 	width: 100px;
 }
+
+.no-p-margin p {
+    margin: 0;
+}

@@ -28,6 +28,8 @@ class Customer extends \Application\DataMapper\DataMapper
 		$model->credits = new \Application\Model\Collection\Collection();
 		$model->oldProducts = new \Application\Model\Collection\Collection();
 		$model->renouncements = new Collection();
+		$model->history = new \Application\Model\Collection\Collection();
+
 
 		return $model;
 	}
@@ -53,6 +55,10 @@ class Customer extends \Application\DataMapper\DataMapper
 			$dataMapper = $em->getDataMapper("Product");
 			return $dataMapper->findManyToManyRowset($row, "DbTable\Products", "DbTable\Applications", "Customer", "Product");
 		});
+	    $model->history = new VirtualCollection(function() use ($em, $row) {
+	        $dataMapper = $em->getDataMapper("CustomerHistory");
+	        return $dataMapper->findDependentRowset($row, "Customer");
+	    });
 		$model->oldProducts = new VirtualCollection(function() use($em, $row) {
 			$dataMapper = $em->getDataMapper("CustomerOldProduct");
 			return $dataMapper->findDependentRowset($row, "Customer");

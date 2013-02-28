@@ -18,6 +18,7 @@
 			
 			<name>CustomerAddresses</name>
 			<name>CustomerCredits</name>
+			<name>CustomerHistory</name>
 			<name>CustomerDocuments</name>
 			<name>CustomerOldProducts</name>
 			<name>CustomerRenouncements</name>

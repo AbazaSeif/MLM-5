@@ -1,0 +1,45 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<?php if ($this->model->getIdentifier()) : ?>
+	<ul class="list-options list-style-none ajax-options">
+		<li class="add"><a href="/layer/customer-history/add/<?php echo $this->model->getIdentifier(); ?>">Dodaj informacje</a></li>
+	</ul>
+<?php endif; ?>
+<?php if ($this->model->credits->count() > 0) : ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Data</th>
+				<th>Informacja</th>
+				<th>Akcje</th>
+			</tr>
+		</thead>
+		<tbody>
+			<?php foreach ($this->model->history as $history) : ?>
+				<tr>
+					<td><?php echo $history->date ?></td>
+					<td class='no-p-margin'><?php echo $history->info; ?></td>
+					<td>
+						<ul class="list-style-none actions ajax-options">
+							<li class="edit">
+								<a href="/layer/customer-history/edit/<?php echo $history->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="edytuj" title="edytuj"></a>
+							</li>
+							<li class="delete">
+								<a href="/layer/customer-history/delete/<?php echo $history->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="usuń" title="usuń"></a>
+							</li>
+						</ul>
+					</td>
+				</tr>
+			<?php endforeach; ?>
+		</tbody>
+	</table>
+<?php else :?>
+	<?php echo $this->noResults(); ?>
+<?php endif; ?>

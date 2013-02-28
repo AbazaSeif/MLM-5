@@ -33,16 +33,7 @@ class Privileges extends \Zend_Controller_Plugin_Abstract
 			return;
 		}
 
-		$controller = str_replace('-', '', $request->getControllerName());
-		$action = $this->_mapActionToAccessAction($request->getActionName());
-		$privileges = new \Zend_Config_Xml(APPLICATION_PATH . "/configs/privileges.xml");
-		$modules = $this->_findAllModules($privileges, $controller);
-
-		$hasPrivilege = false;
-		foreach ($modules as $module) {
-			$module = $this->_mapModuleToAcceesModule($module);
-			$hasPrivilege = $hasPrivilege || Manager::hasAccess($action, $module);
-		}
+		$hasPrivilege = self::hasPrivilige($request);
 
 		if ($hasPrivilege == false) {
 			$request->setControllerName("privileges");
@@ -51,10 +42,30 @@ class Privileges extends \Zend_Controller_Plugin_Abstract
 
 	}
 
-	private function _mapActionToAccessAction($action)
+	public static function hasPrivilige($request, $action = null)
+	{
+	    $controller = str_replace('-', '', $request->getControllerName());
+
+	    if ($action == null) {
+	        $action = self::mapActionToAccessAction($request);
+	    }
+
+	    $privileges = new \Zend_Config_Xml(APPLICATION_PATH . "/configs/privileges.xml");
+	    $modules = self::findAllModules($privileges, $controller);
+
+	    $hasPrivilege = false;
+	    foreach ($modules as $module) {
+	        $module = self::mapModuleToAcceesModule($module);
+	        $hasPrivilege = $hasPrivilege || Manager::hasAccess($action, $module);
+	    }
+
+	    return $hasPrivilege;
+	}
+
+	public static function mapActionToAccessAction($request)
 	{
 	    $accessAction = Manager::ACTION_READ;
-	    $action = strtolower($action);
+	    $action = strtolower($request->getActionName());
 
 	    if ($action == "addbonus") {
 	        $action = "add";
@@ -65,7 +76,7 @@ class Privileges extends \Zend_Controller_Plugin_Abstract
 			    $accessAction = Manager::ACTION_UPDATE;
 			    break;
 			case "edit":
-			    if ($this->getRequest()->isPost()) {
+			    if ($request->isPost()) {
 				    $accessAction = Manager::ACTION_UPDATE;
 			    }
 			    break;
@@ -77,7 +88,7 @@ class Privileges extends \Zend_Controller_Plugin_Abstract
 		return $accessAction;
 	}
 
-	private function _findAllModules(\Zend_Config $config, $value)
+	public static function findAllModules(\Zend_Config $config, $value)
 	{
 		$found = array();
 		$value = strtolower($value);
@@ -100,7 +111,7 @@ class Privileges extends \Zend_Controller_Plugin_Abstract
 		return $found;
 	}
 
-	private function _mapModuleToAcceesModule($module)
+	public static function mapModuleToAcceesModule($module)
 	{
 		$module = "\Application\Access\Manager::MODULE_" . strtoupper($module);
 		return constant($module);
