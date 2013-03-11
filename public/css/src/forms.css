@@ -321,3 +321,7 @@
 						margin: 0.25em;
 						width: 120px;
 					}
+					
+.form .readonly {
+    border-style: dotted;
+}

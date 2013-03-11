@@ -34,6 +34,7 @@
 			
 			<name>ApplicationDocuments</name>
 			<name>ApplicationShipments</name>
+			<name>CustomerProducts</name>
 		</controllers>
 	</Applications>
 	

@@ -34,13 +34,23 @@ class Trainings_SubForm_Basic extends \Application\Form\Subform
 			->setChecked($this->getModel()->active);
 		$this->addElement($element);
 
+		$examiners = array();
 		$employees = $em->findAllActive("Employee");
+		$groupsOut = array("Administracja", "Doradcy Klienta", "Telemarketing");
+
+		foreach ($employees as $index => $employee) {
+		    if (!in_array($employee->group->name, $groupsOut)) {
+		        $examiners[] = $employee;
+		    }
+		}
+
 		$element = $this->createElement("select", "employee");
-		$element->addValidator(new Zend_Validate_Int())
+		$element->setRequired()
+		    ->addValidator(new Zend_Validate_Int())
     		->addFilter(new Zend_Filter_Null())
     		->setLabel("Egzaminator")
     		->setValue($this->getModel()->employee->getIdentifier())
-    		->setMultiOptions($this->getMultiOptions($employees, array("lastname", "firstname")));
+    		->setMultiOptions($this->getMultiOptions($examiners, array("lastname", "firstname")));
 		$this->addElement($element);
 	}
 }

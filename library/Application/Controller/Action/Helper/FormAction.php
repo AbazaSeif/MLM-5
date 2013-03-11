@@ -18,7 +18,9 @@ class FormAction extends \Zend_Controller_Action_Helper_Abstract
 	{
 		$em = EntityManager::getInstance();
 		$form->setAction($this->getRequest()->getRequestUri());
-		$form->getElement("parent")->setValue($this->getRequest()->getParam("parent"));
+		if ($form->getElement("parent")) {
+		    $form->getElement("parent")->setValue($this->getRequest()->getParam("parent"));
+	    }
 
 		if ($this->getRequest()->isPost() && $form->isValid($_POST)) {
 			call_user_func(array($this->getActionController(), self::SET_MODEL_METHOD), $form, $model);

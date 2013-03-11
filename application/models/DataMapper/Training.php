@@ -16,7 +16,10 @@ class Training extends \Application\DataMapper\DataMapper
 
 	protected function _doCreate()
 	{
-		return new \Model\Training();
+		$model =  new \Model\Training();
+		$model->employee = new \Model\Employee();
+
+		return $model;
 	}
 
 	protected function _doLoad($id)

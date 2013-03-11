@@ -35,11 +35,21 @@ class Employees_SubForm_Training extends \Application\Form\Subform
 			->setValue($this->getModel()->mark);
 		$this->addElement($element);
 
-		$examiners = $em->findAllActive("Employee");
+		$examiners = array();
+		$employees = $em->findAllActive("Employee");
+		$groupsOut = array("Administracja", "Doradcy Klienta", "Telemarketing");
+
+		foreach ($employees as $index => $employee) {
+		    if (!in_array($employee->group->name, $groupsOut)) {
+		        $examiners[] = $employee;
+		    }
+		}
+
 		$element = $this->createElement("select", "examiner");
 		$element->setRequired()
 			->addValidator("Int")
 			->addFilter(new Zend_Filter_Null())
+			->setMultiOptions($this->getMultiOptions($examiners, array("lastname", "firstname")))
 			->setLabel("Egzaminator")
 			->setValue($this->getModel()->examiner->getIdentifier());
 		$this->addElement($element);

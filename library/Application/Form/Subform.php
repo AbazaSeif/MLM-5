@@ -8,6 +8,8 @@
 
 namespace Application\Form;
 
+use \Application\Access\Manager;
+
 class Subform extends \Application\Form\Form
 {
 	public function loadDefaultDecorators()
@@ -48,9 +50,17 @@ class Subform extends \Application\Form\Form
 
 	public function render(\Zend_View $view = null)
 	{
+	    $request = \Zend_Controller_Front::getInstance()->getRequest();
+	    $hasPrivilege = \Application\Controller\Plugin\Privileges::hasPrivilige($request, Manager::ACTION_UPDATE);
+
 		foreach ($this->getElements() as $name => $element) {
 			if ($element instanceof \Zend_Form_Element_File) {
 				$element->setDecorators($this->getElementDecoratorsForFile());
+			}
+
+			if ($hasPrivilege == false) {
+			    $element->setAttrib('readonly', true);
+			    $element->setAttrib('class', 'readonly');
 			}
 		}
 

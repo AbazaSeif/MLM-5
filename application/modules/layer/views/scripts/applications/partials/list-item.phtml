@@ -1,0 +1,51 @@
+<?php
+/**
+ * MLM System
+ *
+ * @author    Adrian Wądrzyk <adrian.wadrzyk@gmail.com>
+ * @copyright 2012 Adrian Wądrzyk. All rights reserved.
+ */
+?>
+
+<tr class="color-<?php echo ($this->partialCounter % 2); ?>">
+	<td><?php echo $this->model->identifier; ?></td>
+	<td>
+		<?php if ($this->model->customer) : ?>
+			<?php echo $this->model->customer->lastname . ' ' . $this->model->customer->firstname; ?>
+		<?php endif; ?>
+	</td>
+	<td>
+		<?php if ($this->model->employee) : ?>
+			<?php echo $this->model->employee->lastname . ' ' . $this->model->employee->firstname; ?>
+		<?php endif; ?>
+	</td>
+	<td>
+		<?php if ($this->model->product) : ?>
+			<?php echo $this->model->product->name; ?>
+		<?php endif; ?>
+	</td>
+	<td>
+		<?php if ($this->model->settlementType) : ?>
+			<?php echo $this->model->settlementType->name; ?>
+		<?php endif; ?>
+	</td>
+	<td><?php echo $this->model->createDate; ?></td>
+	<td>
+		<?php if ($this->model->currency) : ?>
+			<?php echo $this->model->currency->name; ?>
+		<?php endif; ?>
+	</td>
+	<td>
+		<?php if ($this->model->status) : ?>
+			<?php echo $this->model->status->name; ?>
+		<?php endif; ?>
+	</td>
+	<td>
+		<ul class="list-style-none actions">
+			<!-- <li class="print"><a href="/applications/print/<?php echo $this->model->identifier; ?>" alt="drukuj" title="drukuj"></a></li> -->
+			<li class="edit"><a href="/applications/edit/<?php echo $this->model->identifier; ?>" alt="edytuj" title="edytuj"></a></li>
+			<li class="delete"><a href="/applications/delete/<?php echo $this->model->identifier; ?>" alt="usuń" title="usuń"></a></li>
+		</ul>
+	</td>
+</tr>
+

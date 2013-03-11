@@ -17,6 +17,7 @@
 				<th>Osoba kontaktowa</th>
 				<th>Typ</th>
 				<th>Aktywność</th>
+				<th>Wniosek</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -28,6 +29,13 @@
 					<td><?php echo $product->contactPerson->lastname . " " . $product->contactPerson->firstname; ?></td>
 					<td><?php echo $product->type->name; ?></td>
 					<td class="activity"><?php echo $product->active; ?></td>
+					<td>
+					    <ul class="list-style-none actions ajax-options">
+							<li class="edit">
+								<a href="/layer/customer-products/edit/<?php echo $product->getIdentifier() . "/" . $this->model->getIdentifier(); ?>" alt="edytuj" title="edytuj"></a>
+							</li>
+						</ul>
+					</td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
