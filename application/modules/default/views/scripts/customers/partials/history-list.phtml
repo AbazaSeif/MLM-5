@@ -17,6 +17,7 @@
 		<thead>
 			<tr>
 				<th>Data</th>
+				<th>Instrument</th>
 				<th>Informacja</th>
 				<th>Akcje</th>
 			</tr>
@@ -25,7 +26,12 @@
 			<?php foreach ($this->model->history as $history) : ?>
 				<tr>
 					<td><?php echo $history->date ?></td>
-					<td class='no-p-margin'><?php echo $history->info; ?></td>
+					<td>
+					    <?php if ($history->instruction) : ?>
+					        <?php echo $history->instruction->name; ?>
+					    <?php endif; ?>
+				    </td>
+				    <td class='no-p-margin'><?php echo $history->info; ?></td>
 					<td>
 						<ul class="list-style-none actions ajax-options">
 							<li class="edit">

@@ -18,6 +18,11 @@ class CustomerHistory extends \Zend_Db_Table_Abstract
 			"columns" 				=> "customer_id",
 			"refTableClass" 	=> "DbTable\Customers",
 			"refColumns"			=> "customer_id"
-		)
+		),
+	    "Instruction" => array(
+	        "columns" 				=> "instruction_id",
+	        "refTableClass" 		=> "DbTable\Instructions",
+	        "refColumns"			=> "instruction_id"
+	    ),
 	);
 }

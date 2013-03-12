@@ -116,7 +116,12 @@ abstract class DataMapper
 						$additionalTable = new $className;
 						$additionalTablePrimaryKey = array_pop($additionalTable->info("primary"));
 
-						$select->joinLeftUsing($tableName, $additionalTablePrimaryKey, array());
+						if ($tableName == "customer_addresses") {
+						    $select->joinLeftUsing($tableName, "customer_id", array());
+						    $select->where("customer_addresses.city != ''");
+						} else {
+						    $select->joinLeftUsing($tableName, $additionalTablePrimaryKey, array());
+						}
 					}
 
 					$item .= ' ' . $order;
@@ -235,10 +240,12 @@ abstract class DataMapper
 
 	protected function _simpleMap($model, $row)
 	{
-		foreach ($row as $key => $value) {
-			$key = preg_replace("/_(\w{1})/e", "ucfirst('$1')", $key);
-			$model->$key = $value;
-		}
+	    if (is_array($row) || $row instanceof \Traversable) {
+    		foreach ($row as $key => $value) {
+    			$key = preg_replace("/_(\w{1})/e", "ucfirst('$1')", $key);
+    			$model->$key = $value;
+    		}
+	    }
 
 		return $model;
 	}

@@ -14,6 +14,7 @@ namespace Entity;
  * @property Customer customer
  * @property float date
  * @property string info
+ * @property Instruction instruction
  */
 class CustomerHistory extends \Application\Entity\Entity
 {
@@ -23,4 +24,5 @@ class CustomerHistory extends \Application\Entity\Entity
 	protected $_customer;
 	protected $_date;
 	protected $_info;
+	protected $_instruction;
 }

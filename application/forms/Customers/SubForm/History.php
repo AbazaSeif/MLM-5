@@ -21,6 +21,19 @@ class Customers_SubForm_History extends \Application\Form\Subform
 			->setValue($this->getModel()->date);
 		$this->addElement($element);
 
+		$instructions = $em->findAllActive("Instruction");
+		$element = $this->createElement("select", "instruction");
+		$element->setRequired()
+    		->addValidator("Int")
+    		->addFilter(new Zend_Filter_Null())
+    		->setLabel("Instrument")
+    		->setMultiOptions($this->getMultiOptions($instructions, "name"));
+
+		if ($this->getModel()->instruction) {
+		    $element->setValue($this->getModel()->instruction->getIdentifier());
+		}
+		$this->addElement($element);
+
 		$element = $this->createElement("textarea", "info");
 		$element->setRequired()
 		    ->setLabel("Informacja")

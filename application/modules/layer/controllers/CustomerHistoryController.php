@@ -27,6 +27,7 @@ class Layer_CustomerHistoryController extends Zend_Controller_Action
 		$model->info = $values['info'];
 
 		$model->customer = $em->find("Customer", $form->getValue("parent"));
+		$model->instruction = $em->find("Instruction", $values['instruction']);
 	}
 
 	public function editAction()

@@ -18,6 +18,7 @@ class CustomerHistory extends \Application\DataMapper\DataMapper
 	{
 		$model = new \Model\CustomerHistory();
 		$model->customer = new \Model\Customer();
+		$model->instruction = new \Model\Institution();
 
 		return $model;
 	}
@@ -29,6 +30,7 @@ class CustomerHistory extends \Application\DataMapper\DataMapper
 		$row = $this->getDbTable()->find($id)->current();
 		$this->_simpleMap($model, $row);
 		$model->customer = $em->find("Customer", $row['customer_id']);
+		$model->instruction = $em->find("Instruction", $row['instruction_id']);
 
 		return $model;
 	}
@@ -37,6 +39,7 @@ class CustomerHistory extends \Application\DataMapper\DataMapper
 	{
 		$data = array(
 			"customer_id" => $model->customer->getIdentifier(),
+		    "instruction_id" => $model->instruction->getIdentifier(),
 			"date" => $model->date,
 			"info" => $model->info
 		);
@@ -49,6 +52,7 @@ class CustomerHistory extends \Application\DataMapper\DataMapper
 	{
 		$data = array(
 			"customer_id" => $model->customer->getIdentifier(),
+		    "instruction_id" => $model->instruction->getIdentifier(),
 			"date" => $model->date,
 			"info" => $model->info
 		);

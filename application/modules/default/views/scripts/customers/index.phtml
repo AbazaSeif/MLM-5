@@ -27,7 +27,7 @@
 				<th><?php echo $this->sortLink("cell_phone_number", "Telefon"); ?></th>
 				<th><?php echo $this->sortLink("email", "Email"); ?></th>
 				<th><?php echo $this->sortLink(array("lastname", "firstname"), "Doradca", "employees"); ?></th>
-				<th>Miasto</th>
+				<th><?php echo $this->sortLink("city", "Miasto", "customer_addresses"); ?></th>
 				<th><?php echo $this->sortLink("create_date", "Data dodania"); ?></th>
 				<th class="activity"><?php echo $this->sortLink("active", "Aktywność"); ?></th>
 				<th class="actions">Akcje</th>
