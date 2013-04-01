@@ -103,8 +103,8 @@ class SettlementsController extends Zend_Controller_Action
 			$amount = $settlementTotal->total;
 
 			if ($amount > $configuration->taxFreeAllowance) {
-				$tax =  ($amount - $configuration->taxFreeAllowance) * $configuration->taxPercent;
-				$settlementTotal->tax = \Zend_Locale_Format::toNumber($tax, array("number_format" => "#0.00"));
+				$tax =  ($amount - $configuration->taxFreeAllowance) * $configuration->taxPercent / 100;
+				$settlementTotal->tax = $tax;
 			}
 
 			$em->persist($settlementTotal);

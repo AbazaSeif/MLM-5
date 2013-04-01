@@ -18,7 +18,6 @@ class Storno extends Settlement
 	{
 		$amount = $this->application->amount * $this->percent / 100;
 		$amount = $amount * $this->getPercent() / 100;
-		$amount = \Zend_Locale_Format::toNumber($amount, array("number_format" => "#0.00"));
 
 		return $amount;
 	}

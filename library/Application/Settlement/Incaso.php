@@ -16,7 +16,6 @@ class Incaso extends Settlement
 	{
 		$amount = $this->application->amount * $this->percent / 100;
 		$amount /= $this->countParts($this->application->premiumType);
-		$amount = \Zend_Locale_Format::toNumber($amount, array("number_format" => "#0.00"));
 
 		return $amount;
 	}

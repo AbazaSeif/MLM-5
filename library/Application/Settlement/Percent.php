@@ -17,7 +17,6 @@ class Percent extends Settlement
 	public function settle()
 	{
 		$amount = $this->application->amount * $this->percent / 100;
-		$amount = \Zend_Locale_Format::toNumber($amount, array("number_format" => "#0.00"));
 
 		return $amount;
 	}
