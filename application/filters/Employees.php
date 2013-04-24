@@ -10,15 +10,12 @@ class Filter_Employees extends \Application\Filter\Filter
 {
 	public function filterByName($value)
 	{
-		$this->getSelect()->where("firstname like '%" . $value . "%'")
-			->orWhere("lastname like '%" . $value . "%'")
-			->orWhere("login like '%" . $value . "%'");
+		$this->getSelect()->where("firstname like '%" . $value . "%' OR lastname like '%" . $value . "%' OR login like '%" . $value . "%'");
 	}
 
 	public function filterByPhone($value)
 	{
-		$this->getSelect()->where("phone_number = ?", $value)
-			->orWhere("cell_phone_number = ?", $value);
+		$this->getSelect()->where("phone_number = '" . $value . "' OR cell_phone_number = '" . $value . "'");
 	}
 
 	public function filterByEmail($value)

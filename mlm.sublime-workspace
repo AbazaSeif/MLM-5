@@ -1,0 +1,589 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"main",
+				"main-header-main-color"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"main-",
+				"main-header"
+			],
+			[
+				"main-he",
+				"main-header-main-color"
+			],
+			[
+				"text-",
+				"text-indent"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"background-",
+				"background-image"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"backgrou",
+				"background-position"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"n",
+				"nowrap"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"bord",
+				"border-spacing"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"conte",
+				"content"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"data",
+				"dataType"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"connect",
+				"connectOutlets"
+			],
+			[
+				"con",
+				"contributor"
+			],
+			[
+				"c",
+				"create"
+			],
+			[
+				"gi",
+				"githubUserName"
+			],
+			[
+				"url",
+				"urlParams"
+			],
+			[
+				"conn",
+				"connectOutlet"
+			],
+			[
+				"appli",
+				"applicationController"
+			],
+			[
+				"u",
+				"usr"
+			],
+			[
+				"ar",
+				"article-pre-bc"
+			],
+			[
+				"arti",
+				"article-pre-bgc"
+			],
+			[
+				"f",
+				"f	Anonymous Function"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "application/filters/Applications.php",
+			"settings":
+			{
+				"buffer_size": 1209,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"fe",
+				"Fetch: File"
+			],
+			[
+				"fetc",
+				"Fetch: File"
+			],
+			[
+				"fetch",
+				"Fetch: File"
+			],
+			[
+				"fet",
+				"Fetch: File"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"PHP Code Sniffer: ",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"php",
+				"PHP Code Sniffer: Sniff this file"
+			],
+			[
+				"git pu",
+				"Git: Pull"
+			],
+			[
+				"git pull",
+				"Git: Pull"
+			],
+			[
+				"packe",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 201.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/mnt/storage/workspace/MLM/application/filters/Customers.php",
+		"/mnt/storage/workspace/MLM/application/filters/Employees.php",
+		"/mnt/storage/workspace/MLM/application/filters/Partners.php",
+		"/mnt/storage/workspace/MLM/application/filters/Products.php",
+		"/mnt/storage/workspace/MLM/application/filters/Recruitment.php",
+		"/mnt/storage/workspace/MLM/application/filters/Settlements.php",
+		"/mnt/storage/workspace/MLM/application/filters/Applications.php",
+		"/mnt/storage/workspace/MLM/application/models/DataMapper/Customer.php",
+		"/mnt/storage/workspace/MLM/library/Application/Paginator/Adapter/DataMapper.php",
+		"/mnt/storage/workspace/MLM/library/Application/Controller/Action/Helper/Paginator.php",
+		"/mnt/storage/workspace/MLM/library/Application/Filter/Filter.php",
+		"/mnt/storage/workspace/MLM/library/Application/DataMapper/DataMapper.php",
+		"/mnt/storage/workspace/MLM/application/models/Entity/Customer.php",
+		"/home/adrian/.config/sublime-text-2/Packages/Phpcs/phpcs.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/User/phpcs.sublime-settings",
+		"/mnt/storage/workspace/MLM/library/Application/Entity/Entity.php",
+		"/mnt/storage/workspace/Kanban/public/img/html5-logo.png",
+		"/mnt/storage/workspace/Kanban/public/css/base.less",
+		"/home/adrian/.config/sublime-text-2/Packages/User/SublimeLinter.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/User/LiveReload.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/LiveReload/LiveReload.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/User/JSON.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/User/Fetch.sublime-settings",
+		"/mnt/storage/workspace/Kanban/public/js/vendor/less.js",
+		"/mnt/storage/workspace/Kanban/public/css/base.css",
+		"/mnt/storage/workspace/Kanban/public/index.php",
+		"/mnt/storage/workspace/Kanban/public/css/header.css",
+		"/home/adrian/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/mnt/storage/workspace/Kanban/public/css/normalize.css",
+		"/mnt/storage/workspace/Kanban/public/js/app.js",
+		"/mnt/storage/workspace/Kanban/application/src/model",
+		"/mnt/storage/workspace/Kanban/application/src/layout/default.phtml",
+		"/home/adrian/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/DocBlockr/Base File.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
+		"/mnt/storage/workspace/Kanban/application/src",
+		"/mnt/storage/workspace/Kanban/application/layout/default.phtml",
+		"/home/adrian/.config/sublime-text-2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/mnt/storage/workspace/Kanban/public/js/lib/jquery.js",
+		"/mnt/storage/workspace/Kanban/public/.htaccess",
+		"/home/adrian/.config/sublime-text-2/Packages/AdvancedNewFile/Default (Linux).sublime-keymap",
+		"/mnt/storage/workspace/Kanban/public/js/lib/ember-1.0.0-pre.2.js",
+		"/home/adrian/.config/sublime-text-2/Packages/AdvancedNewFile/AdvancedNewFile.sublime-settings",
+		"/mnt/storage/workspace/Kanban/public/js/lib/ember-1.0.0-pre.2.min.js",
+		"/home/adrian/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/adrian/.config/sublime-text-2/Packages/Emmet/Emmet.sublime-settings",
+		"/mnt/storage/workspace/Kanban/.gitignore",
+		"/mnt/storage/workspace/Ember/public/.htaccess",
+		"/mnt/storage/workspace/Ember/layout/default.phtml",
+		"/mnt/storage/workspace/Ember/config/view.xml",
+		"/mnt/storage/workspace/Ember/index.php",
+		"/mnt/storage/workspace/Blog/public/css/src/header.less",
+		"/mnt/storage/workspace/Blog/public/css/src/common.less",
+		"/mnt/storage/workspace/Blog/public/css/src/base.less",
+		"/mnt/storage/workspace/Blog/Application/src/Application/View/AbstractView.php",
+		"/mnt/storage/workspace/Blog/Application/src/Application/View/View.php",
+		"/mnt/storage/workspace/Blog/Application/src/Application/View/ViewModel.php",
+		"/mnt/storage/workspace/Blog/Application/src/Application/Loader/StandardAutoloader.php",
+		"/mnt/storage/workspace/Blog/public/index.php",
+		"/mnt/storage/workspace/Blog/Application/View/layout.phtml",
+		"/mnt/storage/workspace/Blog/Application/src/Application/Autoloader/StandardAutoloader.php",
+		"/mnt/storage/workspace/Blog/Application/src/Application/View/Model.php",
+		"/mnt/storage/workspace/Blog/Application/src/Application/View/Abstract.php",
+		"/mnt/storage/workspace/Blog/index.html",
+		"/mnt/storage/workspace/Blog/js/main.js",
+		"/mnt/storage/workspace/Blog/css/src/articles.less",
+		"/home/adrian/.config/sublime-text-2/Packages/Git/Git.sublime-settings",
+		"/home/adrian/.config/sublime-text-2/Packages/User/Git.sublime-settings",
+		"/mnt/storage/workspace/Blog/css/prism.css",
+		"/home/adrian/.config/sublime-text-2/Packages/JSLint/JSLint.sublime-build",
+		"/mnt/storage/workspace/Blog/css/styles.less",
+		"/mnt/storage/workspace/Blog/css/src/header.less",
+		"/mnt/storage/workspace/Blog/css/src/base.less",
+		"/home/adrian/.config/sublime-text-2/Packages/JSLint/JSLint.sublime-settings"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"orWhe",
+			"orWhere",
+			"16283c",
+			"css",
+			"font",
+			"menu",
+			"monospace",
+			"monospac",
+			"'"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/filters/Applications.php",
+					"settings":
+					{
+						"buffer_size": 1209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"bitwise": true,
+								"browser": true,
+								"camelcase": false,
+								"curly": true,
+								"devel": true,
+								"eqeqeq": true,
+								"forin": true,
+								"immed": true,
+								"indent": 4,
+								"latedef": true,
+								"maxdepth": 3,
+								"maxstatements": 0,
+								"newcap": true,
+								"noarg": true,
+								"noempty": true,
+								"nomen": true,
+								"nonew": true,
+								"onevar": true,
+								"plusplus": false,
+								"quotmark": false,
+								"regexp": true,
+								"strict": false,
+								"trailing": true,
+								"undef": false,
+								"unused": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+								"css"
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 190.0
+	},
+	"output.git":
+	{
+		"height": 235.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"d",
+				"Application/src/layout/default.phtml"
+			],
+			[
+				"he",
+				"public/css/header.css"
+			],
+			[
+				"de",
+				"Application/src/layout/default.phtml"
+			],
+			[
+				"ba",
+				"public/css/base.css"
+			],
+			[
+				"inde",
+				"Application/src/layout/default.phtml"
+			],
+			[
+				"ap",
+				"public/js/app.js"
+			],
+			[
+				"main",
+				"js/main.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/mnt/storage/workspace/Ember/ember.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true
+}

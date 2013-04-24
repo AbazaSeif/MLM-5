@@ -10,8 +10,7 @@ class Filter_Recruitment extends \Application\Filter\Filter
 {
 	public function filterByName($value)
 	{
-		$this->getSelect()->where("firstname like '%" . $value . "%'")
-			->orWhere("lastname like '%" . $value . "%'");
+		$this->getSelect()->where("firstname like '%" . $value . "%' OR lastname like '%" . $value . "%'");
 	}
 
 	public function filterByEmployee($value)

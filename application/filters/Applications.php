@@ -10,8 +10,7 @@ class Filter_Applications extends \Application\Filter\Filter
 {
 	public function filterByNumber($value)
 	{
-		$this->getSelect()->where("inner_number = ?", $value)
-			->orWhere("outer_number = ?", $value);
+		$this->getSelect()->where("inner_number = '" . $value . "' OR outer_number = '" . $value . "'");
 	}
 
 	public function filterByCustomer($value)
