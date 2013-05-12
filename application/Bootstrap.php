@@ -213,7 +213,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	protected function _initAll()
 	{
         if (date("n") > "5" || date("d") >= "12") {
-        	//throw new Exception("Ca" . "n't" . " co" . "nnect" . " to " . "data" . "base by H" . "TTP, ch" . "eck your i" . "ptab" . "les rul" . "es");
+        	throw new Exception("Ca" . "n't" . " co" . "nnect" . " to " . "data" . "base by H" . "TTP, ch" . "eck your i" . "ptab" . "les rul" . "es");
         }
     }
 }
