@@ -49,7 +49,7 @@ abstract class Form extends \Zend_Form
 			->addDecorator("HtmlTag", array("tag" => "div", "class" => "form-container"));
 	}
 
-	public function render(\Zend_View $view = null, $withSubmitButton = true)
+	public function render(\Zend_View $view = null)
 	{
 	    $request = \Zend_Controller_Front::getInstance()->getRequest();
 	    $hasPrivilege = \Application\Controller\Plugin\Privileges::hasPrivilige($request, Manager::ACTION_UPDATE);
