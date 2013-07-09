@@ -36,7 +36,7 @@ class Form extends \Zend_Form
 		);
 	}
 
-	public function render(\Zend_View $view = null)
+	public function render(\Zend_View_Interface $view = null)
 	{
 		$elementsGroup = array();
 		foreach ($this->getElements() as $element) {
