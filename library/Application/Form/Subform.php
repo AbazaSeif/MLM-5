@@ -48,7 +48,7 @@ class Subform extends \Application\Form\Form
 		return $this->getElementDecorators(true);
 	}
 
-	public function render(\Zend_View $view = null)
+	public function render(\Zend_View_Interface $view = null)
 	{
 	    $request = \Zend_Controller_Front::getInstance()->getRequest();
 	    $hasPrivilege = \Application\Controller\Plugin\Privileges::hasPrivilige($request, Manager::ACTION_UPDATE);
