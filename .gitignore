@@ -2,7 +2,7 @@
 .project
 .zfproject.xml
 .settings
-.mlm.sublime-project
-.mlm.sublime-workspace
+mlm.sublime-project
+mlm.sublime-workspace
 public/documents/*
 tmp/log/*
